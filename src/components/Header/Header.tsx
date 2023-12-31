@@ -6,8 +6,8 @@ import classes from './Header.module.css';
 const links = [
   { link: '/projects', label: 'Projects' },
   { link: '/about', label: 'About' },
-  { link: '/linkedin', label: 'LinkedIn' },
-  { link: '/github', label: 'GitHub' },
+  { link: 'https://www.linkedin.com/in/sxflynn', label: 'LinkedIn' },
+  { link: 'https://github.com/sxflynn', label: 'GitHub' },
 ];
 
 export function Header() {
