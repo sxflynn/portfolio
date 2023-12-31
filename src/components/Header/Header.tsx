@@ -5,7 +5,7 @@ import classes from './Header.module.css';
 
 const links = [
   { link: '/projects', label: 'Projects' },
-  { link: '/about', label: 'about' },
+  { link: '/about', label: 'About' },
   { link: '/linkedin', label: 'LinkedIn' },
   { link: '/github', label: 'GitHub' },
 ];
