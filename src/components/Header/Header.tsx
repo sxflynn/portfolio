@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Group, Burger, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import classes from './Header.module.css';
 
 const links = [
@@ -12,8 +12,9 @@ const links = [
 ];
 
 export function Header() {
+  const location = useLocation();
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [active, setActive] = useState(location.pathname);
 
   const items = links.map((link) => {
     const isExternalLink = link.link.startsWith('http');
