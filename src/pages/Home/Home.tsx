@@ -1,8 +1,7 @@
-import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } from '@mantine/core';
+import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import { IconCheck } from '@tabler/icons-react';
 import classes from './Home.module.css'
-import image from './image.svg';
 
 const Home = () => {
     return (
@@ -52,6 +51,7 @@ const Home = () => {
                 </div>
                 {/* Image goes here */}
             </div>
+            
         </Container>
     );
 }
