@@ -4,6 +4,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
 import { IconExternalLink } from '@tabler/icons-react';
 import classes from './Header.module.css';
+import { ColorSchemeButton } from '../ColorSchemeButton/ColorSchemeButton';
 
 const links = [
   { link: '/projects', label: 'Projects' },
@@ -74,6 +75,7 @@ export function Header() {
 
         {/* Top Items */}
         <Group gap={5} visibleFrom="xs">
+        <ColorSchemeButton/>
           {topItems}
         </Group>
 
