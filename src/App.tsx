@@ -5,9 +5,12 @@ import { Header } from './components/Header/Header';
 import { Outlet } from 'react-router-dom';
 
 export default function App() {
-  return <MantineProvider defaultColorScheme="auto">
-      <Header/>
-      <Outlet />
-      {/* ADD FOOTER */}
-      </MantineProvider>
+  return <MantineProvider
+    theme={theme}
+    defaultColorScheme="auto"
+  >
+    <Header />
+    <Outlet />
+    {/* ADD FOOTER */}
+  </MantineProvider>
 }
