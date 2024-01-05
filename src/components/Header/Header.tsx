@@ -75,8 +75,8 @@ export function Header() {
 
         {/* Top Items */}
         <Group gap={5} visibleFrom="xs">
-        <ColorSchemeButton/>
           {topItems}
+          <ColorSchemeButton/>
         </Group>
 
         {/* Menu Items */}
@@ -88,7 +88,7 @@ export function Header() {
             {dropdownMenuItems}
           </Menu.Dropdown>
         </Menu>
-
+        
       </Container>
     </header>
   );
