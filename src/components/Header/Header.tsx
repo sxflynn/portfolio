@@ -17,7 +17,7 @@ export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(location.pathname);
 
-  const menuItems = links.map((link) => {
+  const dropdownMenuItems = links.map((link) => {
     const isExternalLink = link.link.startsWith('http');
     return isExternalLink ? (
       <Menu.Item component="a"
@@ -32,8 +32,7 @@ export function Header() {
     );
   });
 
-
-  const items = links.map((link) => {
+  const topItems = links.map((link) => {
     const isExternalLink = link.link.startsWith('http');
     return isExternalLink ? (
       <a
@@ -71,15 +70,20 @@ export function Header() {
         >
           <Text size="xl">Stephen Flynn</Text>
         </Link>
+
+
+        {/* Top Items */}
         <Group gap={5} visibleFrom="xs">
-          {items}
+          {topItems}
         </Group>
+
+        {/* Menu Items */}
         <Menu opened={opened} onOpen={toggle} onClose={toggle}>
           <Menu.Target>
             <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
           </Menu.Target>
           <Menu.Dropdown>
-            {menuItems}
+            {dropdownMenuItems}
           </Menu.Dropdown>
         </Menu>
 
