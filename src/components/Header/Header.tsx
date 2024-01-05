@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Container, Group, Burger, Text } from '@mantine/core';
+import { Container, Menu, Group, Burger, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link, useLocation } from 'react-router-dom';
+import { IconExternalLink } from '@tabler/icons-react';
 import classes from './Header.module.css';
 
 const links = [
@@ -16,6 +17,22 @@ export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(location.pathname);
 
+  const menuItems = links.map((link) => {
+    const isExternalLink = link.link.startsWith('http');
+    return isExternalLink ? (
+      <Menu.Item component="a"
+       rightSection={<IconExternalLink/>}
+       href={link.link} key={link.label} target="_blank" rel="noopener noreferrer">
+        {link.label}
+      </Menu.Item>
+    ) : (
+      <Menu.Item component={Link} to={link.link} key={link.label} onClick={() => setActive(link.link)}>
+        {link.label}
+      </Menu.Item>
+    );
+  });
+
+
   const items = links.map((link) => {
     const isExternalLink = link.link.startsWith('http');
     return isExternalLink ? (
@@ -25,7 +42,7 @@ export function Header() {
         className={classes.link}
         rel="noopener noreferrer"
       >
-        {link.label}
+        {link.label} <IconExternalLink size={14} />
       </a>
     ) : (
       <Link
@@ -44,21 +61,28 @@ export function Header() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-      <Link 
-      to="/" 
-      style={{ 
-        textDecoration: 'none', 
-        color: 'inherit'
-        }}
-      onClick={() => setActive("")}
+        <Link
+          to="/"
+          style={{
+            textDecoration: 'none',
+            color: 'inherit'
+          }}
+          onClick={() => setActive("")}
         >
           <Text size="xl">Stephen Flynn</Text>
-          </Link>
+        </Link>
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
+        <Menu opened={opened} onOpen={toggle} onClose={toggle}>
+          <Menu.Target>
+            <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+          </Menu.Target>
+          <Menu.Dropdown>
+            {menuItems}
+          </Menu.Dropdown>
+        </Menu>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>
   );
