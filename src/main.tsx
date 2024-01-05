@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from "react-router-dom";
 
 import App from "./App.tsx";
-import About from "./pages/About.tsx";
-import Home from "./pages/Home.tsx";
-import Projects from "./pages/Projects.tsx";
+import About from "./pages/About/About.tsx";
+import Home from "./pages/Home/Home.tsx";
+import Projects from "./pages/Projects/Projects.tsx";
 
 
 const router = createBrowserRouter(
