@@ -1,4 +1,4 @@
-import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } from '@mantine/core';
+import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code, Image } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import { IconCheck } from '@tabler/icons-react';
 import classes from './Projects.module.css'
@@ -51,6 +51,7 @@ const Projects = () => {
                     </Group>
                 </div>
                 {/* Image goes here */}
+                Image
             </div>
 
         </Container>
