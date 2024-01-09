@@ -79,7 +79,7 @@ const BallotBearProject = () => {
                 </div>
 
                 <div className={classes.video}>
-                    <video autoPlay muted loop playsInline>
+                    <video autoPlay muted loop playsInline controls>
                         <source src={ballotBearDemo} type="video/mp4"/>
                     </video>
 
