@@ -2,7 +2,7 @@ import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } fro
 import { IconCheck, IconExternalLink, IconCoffee, IconSql, IconBrandVue} from '@tabler/icons-react';
 import classes from './Projects.module.css'
 import ExternalLink from '../../components/ExternalLink';
-import ballotBearDemo from '../../assets/ballotbear-demo.mp4';
+import coverMyShiftDemo from '../../assets/covermyshift-demo.mp4';
 
 const CoverMyShiftProject = () => {
 
@@ -41,7 +41,7 @@ const CoverMyShiftProject = () => {
                                     <IconSql style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                                 </ThemeIcon>
                             }>
-                            <b>PostgreSQL database</b> – Election configuration and candidate information is validated with Pydantic models
+                            <b>PostgreSQL database</b> – Created relational database in PostgreSQL, utilizing <Code>JOIN</Code> queries combine multiple tables, <Code>WHERE</Code> to filter results, and parameterized statements in <Code>JDBC</Code> database interactions.
                         </List.Item>
                         <List.Item
                             icon={
@@ -70,8 +70,8 @@ const CoverMyShiftProject = () => {
                 </div>
 
                 <div className={classes.video}>
-                    <video autoPlay muted loop playsInline>
-                        <source src={ballotBearDemo} type="video/mp4"/>
+                    <video autoPlay muted loop playsInline controls>
+                        <source src={coverMyShiftDemo} type="video/mp4"/>
                     </video>
 
 
