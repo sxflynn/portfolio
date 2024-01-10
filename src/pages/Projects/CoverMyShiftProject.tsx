@@ -71,7 +71,11 @@ const CoverMyShiftProject = () => {
                     </Group>
                 </div>
                 
-                <VideoPlayer src={coverMyShiftDemo} src2x={coverMyShiftDemo2x}/>
+                <VideoPlayer 
+                src={coverMyShiftDemo} 
+                src2x={coverMyShiftDemo2x}
+                allowDimming={true}
+                />
 
             </div>
 

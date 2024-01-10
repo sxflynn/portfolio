@@ -25,6 +25,6 @@ video{
 }
 
 
-.inverted-video {
-  filter: invert(100%);
+.invertedVideo {
+  filter: brightness(50%);
 }

@@ -1,4 +1,5 @@
 import { useMemo, useRef } from 'react';
+import { useMantineColorScheme } from '@mantine/core'
 import classes from './VideoPlayer.module.css';
 
 type VideoPlayerProps = {
@@ -9,11 +10,11 @@ type VideoPlayerProps = {
     freeSrcType?:string,
     loop?: boolean;
     playsInline?: boolean;
+    allowDimming?:boolean;
 };
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcType, type="video/mp4", loop = true, playsInline = true }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcType, allowDimming: allowDimming=false, type="video/mp4", loop = true, playsInline = true }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
-
 
     const selectedSrc = useMemo(() => {
         const isLargeScreen = window.matchMedia('(min-width: 768px)').matches;
@@ -37,10 +38,20 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcT
             }
         }
     };
+    const {colorScheme } = useMantineColorScheme();
+    const isDark = colorScheme === 'dark';
+    
 
     return (
         <div className={classes.videoContainer} onClick={togglePlayPause}>
-            <video className={classes.video} ref={videoRef} autoPlay muted loop={loop} playsInline={playsInline}>
+            <video 
+            className={`${classes.video} ${(isDark && allowDimming) ? classes.invertedVideo : ''}`} 
+            ref={videoRef} 
+            autoPlay 
+            muted 
+            loop={loop} 
+            playsInline={playsInline}
+            >
                 <source src={selectedSrc} type={type} />
                 {freeSrc && <source src={freeSrc} type={freeSrcType} />}
                 Download the video from <a href = {src}>the original link.</a>

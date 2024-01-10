@@ -81,7 +81,11 @@ const BallotBearProject = () => {
                         </ExternalLink>
                     </Group>
                 </div>
-                <VideoPlayer src={ballotBearDemo} src2x={ballotBearDemo2x}/>
+                <VideoPlayer 
+                src={ballotBearDemo} 
+                src2x={ballotBearDemo2x}
+                allowDimming={true}
+                />
         </div>
 
         </Container >
