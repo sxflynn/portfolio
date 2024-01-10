@@ -1,3 +1,30 @@
 video{
     width: 100%;
+    @media (max-width: $mantine-breakpoint-md){
+      height: 60%;
+    }
+    @media (max-width: $mantine-breakpoint-sm){
+      width: 100%;
+    }
   }
+ 
+.videoContainer {
+  display:flex;
+  justify-content: center;
+  align-content: center;
+
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    display:flex;
+    width: 80%;
+    height: auto; 
+    margin: auto;
+    align-content: center;
+    padding: 0;
+  }
+}
+
+
+.inverted-video {
+  filter: invert(100%);
+}

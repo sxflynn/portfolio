@@ -3,6 +3,7 @@ import { IconCheck, IconExternalLink, IconCoffee, IconSql, IconBrandVue} from '@
 import classes from './Projects.module.css'
 import ExternalLink from '../../components/ExternalLink';
 import coverMyShiftDemo from '../../assets/covermyshift-demo.mp4';
+import coverMyShiftDemo2x from '../../assets/covermyshift-demo@2x.mp4';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 
 const CoverMyShiftProject = () => {
@@ -70,7 +71,7 @@ const CoverMyShiftProject = () => {
                     </Group>
                 </div>
                 
-                <VideoPlayer src={coverMyShiftDemo}/>
+                <VideoPlayer src={coverMyShiftDemo} src2x={coverMyShiftDemo2x}/>
 
             </div>
 

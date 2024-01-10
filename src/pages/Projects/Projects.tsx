@@ -1,4 +1,3 @@
-import { Container } from '@mantine/core';
 import BallotBearProject from './BallotBearProject';
 import CoverMyShiftProject from './CoverMyShiftProject';
 

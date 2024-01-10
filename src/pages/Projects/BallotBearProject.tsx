@@ -4,6 +4,7 @@ import { IconCheck, IconBrandPython, IconApi, IconBrandReact, IconExternalLink }
 import classes from './Projects.module.css'
 import ExternalLink from '../../components/ExternalLink';
 import ballotBearDemo from '../../assets/ballotbear-demo.mp4';
+import ballotBearDemo2x from '../../assets/ballotbear-demo@2x.mp4';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 
 const BallotBearProject = () => {
@@ -80,10 +81,7 @@ const BallotBearProject = () => {
                         </ExternalLink>
                     </Group>
                 </div>
-
-                <VideoPlayer src={ballotBearDemo}/>
-
-
+                <VideoPlayer src={ballotBearDemo} src2x={ballotBearDemo2x}/>
         </div>
 
         </Container >
