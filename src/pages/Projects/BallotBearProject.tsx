@@ -1,10 +1,13 @@
+import { useRef } from 'react';
 import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code, Image } from '@mantine/core';
 import { IconCheck, IconBrandPython, IconApi, IconBrandReact, IconExternalLink } from '@tabler/icons-react';
 import classes from './Projects.module.css'
 import ExternalLink from '../../components/ExternalLink';
 import ballotBearDemo from '../../assets/ballotbear-demo.mp4';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 
 const BallotBearProject = () => {
+
 
     return (
         <Container size="lg">
@@ -55,22 +58,22 @@ const BallotBearProject = () => {
 
                     <Group mt={30}>
                         <ExternalLink to="http://www.ballotbear.app">
-                            <Button 
-                            radius="xl" 
-                            size="md" 
-                            className={classes.control} 
-                            rightSection={<IconExternalLink/>}
+                            <Button
+                                radius="xl"
+                                size="md"
+                                className={classes.control}
+                                rightSection={<IconExternalLink />}
                             >
                                 Visit BallotBear.app
                             </Button>
                         </ExternalLink>
                         <ExternalLink to="http://www.github.com/sxflynn/electionsim">
-                            <Button 
-                            variant="default" 
-                            radius="xl" 
-                            size="md" 
-                            className={classes.control}
-                            rightSection={<IconExternalLink/>}
+                            <Button
+                                variant="default"
+                                radius="xl"
+                                size="md"
+                                className={classes.control}
+                                rightSection={<IconExternalLink />}
                             >
                                 GitHub repo
                             </Button>
@@ -78,17 +81,12 @@ const BallotBearProject = () => {
                     </Group>
                 </div>
 
-                <div className={classes.video}>
-                    <video autoPlay muted loop playsInline controls>
-                        <source src={ballotBearDemo} type="video/mp4"/>
-                    </video>
+                <VideoPlayer src={ballotBearDemo}/>
 
 
-                </div>
+        </div>
 
-            </div>
-
-        </Container>
+        </Container >
     );
 }
 

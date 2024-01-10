@@ -40,18 +40,18 @@
     }
   }
   
-  .video {
+  .videoContainer {
     display:flex;
     justify-content: center;
     align-content: center;
-    height: 540px;
+
   
     @media (max-width: $mantine-breakpoint-md) {
-      display: block;
+      display:flex;
       width: 100%;
       height: auto; 
       margin: auto;
-      text-align: center;
+      align-content: center;
       padding: 0;
     }
   }
