@@ -69,7 +69,7 @@ export function Header() {
           }}
           onClick={() => setActive("")}
         >
-          <Text size="xl">Stephen Flynn</Text>
+          <Text size="xl">Stephen X. Flynn</Text>
         </Link>
 
 

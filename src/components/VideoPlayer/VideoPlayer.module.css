@@ -1,11 +1,5 @@
 video{
-    width: 100%;
-    @media (max-width: $mantine-breakpoint-md){
-      height: 60%;
-    }
-    @media (max-width: $mantine-breakpoint-sm){
-      width: 100%;
-    }
+    max-width: 100%;
   }
  
 .videoContainer {
@@ -16,7 +10,7 @@ video{
 
   @media (max-width: $mantine-breakpoint-sm) {
     display:flex;
-    width: 80%;
+
     height: auto; 
     margin: auto;
     align-content: center;
@@ -25,6 +19,6 @@ video{
 }
 
 
-.invertedVideo {
-  filter: brightness(50%);
+.dimmedVideo {
+  filter: brightness(60%);
 }

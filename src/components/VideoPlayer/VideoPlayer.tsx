@@ -45,7 +45,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcT
     return (
         <div className={classes.videoContainer} onClick={togglePlayPause}>
             <video 
-            className={`${classes.video} ${(isDark && allowDimming) ? classes.invertedVideo : ''}`} 
+            className={`${classes.video} ${(isDark && allowDimming) ? classes.dimmedVideo : ''}`} 
             ref={videoRef} 
             autoPlay 
             muted 
