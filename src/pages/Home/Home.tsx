@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   Text,
   Container,
@@ -11,9 +12,30 @@ import {
 import classes from "./Home.module.css";
 import { IconCheck } from "@tabler/icons-react";
 
+
+const FlipText = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const skills = ['Java', 'full stack', 'React', 'Python'];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % skills.length);
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return <span className={classes.changeText}>{skills[currentIndex]}</span>;
+};
+
+
 const Home = () => {
+
+ 
   return (
+    
     <Container size={750} className={classes.inner}>
+      
       <h1 className={classes.title}>
         Hi! I'm Stephen X. Flynn, a <br />{" "}
         <Text
@@ -21,10 +43,9 @@ const Home = () => {
           variant="gradient"
           gradient={{ from: "red", to: "orange" }}
           inherit
-        >
-          full stack software developer
+        ><FlipText /> software developer
         </Text>{" "}
-        based in Columbus, Ohio
+        <br/>based in Columbus, Ohio
       </h1>
       {/* <Text size="lg" fw="bold">
         Write a subtitle sentence here about myself
