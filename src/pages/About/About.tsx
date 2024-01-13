@@ -1,10 +1,11 @@
-import { Text } from '@mantine/core';
+import { Container, Text } from '@mantine/core';
 
 const About = () => {
 
     return (
-<Text size="xl">About</Text>
-    );
-}
+<Container size="md">
+    <Text size="xl">About</Text>
+</Container>
+);}
 
 export default About;
