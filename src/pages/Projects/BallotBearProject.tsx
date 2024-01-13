@@ -1,5 +1,4 @@
-import { useRef } from 'react';
-import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code, Image } from '@mantine/core';
+import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } from '@mantine/core';
 import { IconCheck, IconBrandPython, IconApi, IconBrandReact, IconExternalLink } from '@tabler/icons-react';
 import classes from './Projects.module.css'
 import ExternalLink from '../../components/ExternalLink';
