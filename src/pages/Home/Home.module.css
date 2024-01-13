@@ -4,7 +4,9 @@
     justify-content: space-between;
     padding-top: calc(var(--mantine-spacing-xl) * 2);
     padding-bottom: calc(var(--mantine-spacing-xl) * 4);
-
+@media (max-width:$mantine-breakpoint-md){
+  padding-top: 0;
+}
   }
   
   .content {

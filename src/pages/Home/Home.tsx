@@ -23,7 +23,7 @@ const FlipText = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % skills.length);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <Container size="md" className={classes.inner}>
       <h1 className={classes.title}>
-        Hi! 👋 I'm Stephen X. Flynn, a <br />{" "}
+        Hi! 👋 I'm Stephen X. Flynn, a {" "}
         <Text
           component="span"
           variant="gradient"
@@ -44,8 +44,7 @@ const Home = () => {
         >
           <FlipText /> software developer
         </Text>{" "}
-        <br />
-        based in Columbus, Ohio. <IconBuildingSkyscraper size={36} />
+        based in Columbus, Ohio. <IconBuildingSkyscraper size={30} />
       </h1>
       <Text size="lg">
         I'm passionate about creating web applications
