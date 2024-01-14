@@ -2,8 +2,6 @@ import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } fro
 import { IconCheck, IconBrandPython, IconApi, IconBrandReact, IconExternalLink } from '@tabler/icons-react';
 import classes from './Projects.module.css'
 import ExternalLink from '../../components/ExternalLink';
-import ballotBearDemo from '../../assets/ballotbear-demo.mp4';
-import ballotBearDemo2x from '../../assets/ballotbear-demo@2x.mp4';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 
 const BallotBearProject = () => {
@@ -81,8 +79,8 @@ const BallotBearProject = () => {
                     </Group>
                 </div>
                 <VideoPlayer 
-                src={ballotBearDemo} 
-                src2x={ballotBearDemo2x}
+                src='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/ballotbear-demo.mp4'
+                src2x='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/ballotbear-demo@2x.mp4'
                 allowDimming={true}
                 />
         </div>

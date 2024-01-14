@@ -1,5 +1,5 @@
-import { useMemo, useRef } from 'react';
-import { useMantineColorScheme } from '@mantine/core'
+import { useMemo, useRef, useState } from 'react';
+import { LoadingOverlay, useMantineColorScheme } from '@mantine/core'
 import classes from './VideoPlayer.module.css';
 
 type VideoPlayerProps = {
@@ -15,6 +15,8 @@ type VideoPlayerProps = {
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcType, allowDimming: allowDimming=false, type="video/mp4", loop = true, playsInline = true }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const [isLoading, setIsLoading] = useState(true);
+
 
     const selectedSrc = useMemo(() => {
         const isLargeScreen = window.matchMedia('(min-width: 768px)').matches;
@@ -27,6 +29,13 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcT
         return freeSrc;
     }, [src, src2x, freeSrc, type]);
 
+    const onVideoLoadStart = () =>{
+        setIsLoading(true);
+    };
+
+    const onVideoCanPlay = () =>{
+        setIsLoading(false);
+    };
 
     const togglePlayPause = () => {
         const video = videoRef.current;
@@ -44,13 +53,19 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcT
 
     return (
         <div className={classes.videoContainer} onClick={togglePlayPause}>
+            <LoadingOverlay 
+            visible={isLoading}
+            loaderProps={{ type: 'dots' }}
+            />
             <video 
-            className={`${classes.video} ${(isDark && allowDimming) ? classes.dimmedVideo : ''}`} 
+            className={`${(isDark && allowDimming) ? classes.dimmedVideo : ''}`} 
             ref={videoRef} 
             autoPlay 
             muted 
-            loop={loop} 
+            loop={loop}
             playsInline={playsInline}
+            onLoadStart={onVideoLoadStart}
+            onCanPlay={onVideoCanPlay}
             >
                 <source src={selectedSrc} type={type} />
                 {freeSrc && <source src={freeSrc} type={freeSrcType} />}

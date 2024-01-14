@@ -2,8 +2,6 @@ import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } fro
 import { IconCheck, IconExternalLink, IconCoffee, IconSql, IconBrandVue} from '@tabler/icons-react';
 import classes from './Projects.module.css'
 import ExternalLink from '../../components/ExternalLink';
-import coverMyShiftDemo from '../../assets/covermyshift-demo.mp4';
-import coverMyShiftDemo2x from '../../assets/covermyshift-demo@2x.mp4';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 
 const CoverMyShiftProject = () => {
@@ -72,8 +70,8 @@ const CoverMyShiftProject = () => {
                 </div>
                 
                 <VideoPlayer 
-                src={coverMyShiftDemo} 
-                src2x={coverMyShiftDemo2x}
+                src='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/covermyshift-demo.mp4'
+                src2x='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/covermyshift-demo@2x.mp4'
                 allowDimming={true}
                 />
 
