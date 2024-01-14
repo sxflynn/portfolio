@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Container, Menu, Group, Burger, Text } from '@mantine/core';
+import { Container, Menu, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { IconExternalLink } from '@tabler/icons-react';
 import classes from './Header.module.css';
 import { ColorSchemeButton } from '../ColorSchemeButton/ColorSchemeButton';
+import { FullNameHeader } from '../FullNameHeader/FullNameHeader';
 
 const links = [
   { link: '/projects', label: 'Projects' },
@@ -45,7 +46,7 @@ export function Header() {
         {link.label} <IconExternalLink size={14} />
       </a>
     ) : (
-      <Link
+      <NavLink
         key={link.label}
         to={link.link}
         className={classes.link}
@@ -53,7 +54,7 @@ export function Header() {
         onClick={() => setActive(link.link)}
       >
         {link.label}
-      </Link>
+      </NavLink>
     );
   });
 
@@ -61,24 +62,13 @@ export function Header() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Link
-          to="/"
-          style={{
-            textDecoration: 'none',
-            color: 'inherit'
-          }}
-          onClick={() => setActive("")}
-        >
-          <Text size="xl">Stephen X. Flynn</Text>
-        </Link>
-
+       <FullNameHeader active={active} setActive={setActive} />
 
         {/* Top Items */}
         <Group gap={5} visibleFrom="xs">
           {topItems}
           <ColorSchemeButton/>
         </Group>
-
         {/* Menu Items */}
         <Menu opened={opened} onOpen={toggle} onClose={toggle}>
           <Menu.Target>
