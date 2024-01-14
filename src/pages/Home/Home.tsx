@@ -11,7 +11,6 @@ import {
   Anchor,
   Grid,
   Card,
-  Badge,
   SimpleGrid,
 } from "@mantine/core";
 import classes from "./Home.module.css";
@@ -20,9 +19,7 @@ import {
   IconBrandPython,
   IconBuildingSkyscraper,
   IconCheck,
-  IconCloudComputing,
   IconDownload,
-  IconPresentationOff,
   IconSql,
 } from "@tabler/icons-react";
 
@@ -152,30 +149,6 @@ const Home = () => {
           </Card>
         </div>
       </SimpleGrid>
-      {/* <List
-        spacing="sm"
-        size="md"
-        icon={
-          <ThemeIcon size={"md"} radius="lg" variant="light">
-            <IconCheck style={{ width: rem(20), height: rem(20) }} stroke={2} />
-          </ThemeIcon>
-        }
-      >
-        <ListItem>
-          Within two weeks, created a local election predictor in Python, with a
-          React frontend, deployed to Vercel
-        </ListItem>
-        <ListItem>
-          Within two weeks, led a team to create a web application to help
-          teachers cover their shifts, using Java, PostgreSQL, Vue.js, in an
-          Agile work environment
-        </ListItem>
-        <ListItem>
-          Graduated from intensive 3 month software development bootcamp,
-          learning object oriented development, test driven development
-        </ListItem>
-      </List> */}
-
       <Text size="lg" mt="md" mb="md" fw="bold">
         Career Highlights
       </Text>
