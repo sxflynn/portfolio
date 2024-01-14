@@ -42,7 +42,7 @@ const Home = () => {
           gradient={{ from: "red", to: "orange" }}
           inherit
         >
-          <FlipText /> software developer
+          full stack software developer
         </Text>{" "}
         based in Columbus, Ohio. <IconBuildingSkyscraper size={30} />
       </h1>
