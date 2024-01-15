@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   Text,
   Container,
@@ -24,22 +23,6 @@ import {
 } from "@tabler/icons-react";
 
 import { Link } from "react-router-dom";
-
-// unused animation
-// const FlipText = () => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const skills = ["Java", "full stack", "React", "Python"];
-
-//   useEffect(() => {
-//     const intervalId = setInterval(() => {
-//       setCurrentIndex((prevIndex) => (prevIndex + 1) % skills.length);
-//     }, 2000);
-
-//     return () => clearInterval(intervalId);
-//   }, []);
-
-//   return <span className={classes.changeText}>{skills[currentIndex]}</span>;
-// };
 
 const Home = () => {
   return (
