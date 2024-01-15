@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from "react-router-dom";
+import '@mantine/code-highlight/styles.css';
 
 import App from "./App.tsx";
 import About from "./pages/About/About.tsx";
