@@ -1,4 +1,5 @@
 import "@mantine/core/styles.css";
+import '@mantine/code-highlight/styles.css';
 import { MantineProvider, localStorageColorSchemeManager } from '@mantine/core';
 import { theme } from "./theme";
 import { Header } from './components/Header/Header';
