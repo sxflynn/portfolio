@@ -48,7 +48,7 @@ const Home = () => {
       </Text>
 
       <Group mt="lg" mb="lg">
-        <Anchor href='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/StephenXFlynnResume.pdf'>
+        <Anchor href='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/Stephen%20X%20Flynn%20resume%20portfolio.pdf'>
           <Button rightSection={<IconDownload size={16} />}>View Resume</Button>
         </Anchor>
         <Link to="/projects">
