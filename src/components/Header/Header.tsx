@@ -70,14 +70,17 @@ export function Header() {
           <ColorSchemeButton/>
         </Group>
         {/* Menu Items */}
-        <Menu opened={opened} onOpen={toggle} onClose={toggle}>
-          <Menu.Target>
-            <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
-          </Menu.Target>
-          <Menu.Dropdown>
-            {dropdownMenuItems}
-          </Menu.Dropdown>
-        </Menu>
+        <Group hiddenFrom="xs">
+        <ColorSchemeButton/>
+          <Menu opened={opened} onOpen={toggle} onClose={toggle}>
+            <Menu.Target>
+              <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="md" />
+            </Menu.Target>
+            <Menu.Dropdown>
+              {dropdownMenuItems}
+            </Menu.Dropdown>
+          </Menu>
+        </Group>
         
       </Container>
     </header>
