@@ -16,6 +16,7 @@ import {
   IconBrandJavascript,
   IconBrandPython,
   IconCloudComputing,
+  IconCoffee,
   IconDashboard,
   IconFileSpreadsheet,
   IconFileTypeJsx,
@@ -26,6 +27,25 @@ const excelIcon = <IconFileSpreadsheet />;
 const pythonIcon = <IconBrandPython />;
 const cloudIcon = <IconCloudComputing />;
 const jsxIcon = <IconFileTypeJsx />;
+const coffeeIcon = <IconCoffee />;
+
+const calculatePi = `
+//Authored by Stephen Flynn for CMSC 150, April 2009
+public static void main(String[] args) {
+    double x = Math.sqrt(0.5 + (0.5 * Math.sqrt(0.5)));
+    int N = 0;
+    double product = x;
+    while (N < 2000) {
+        x = Math.sqrt(0.5 + (0.5 * x));
+        product = product * x;
+        N++;
+    }
+    // this multiplies the first part of the formula with the product
+    product = (product * Math.sqrt(0.5));
+    double pi = (2.0 / product);
+    System.out.println("Pi is approxiately: " + pi);
+}
+`;
 
 const plainMedCode = `// Titanium Mobile SDK -- create search bar with OS targeting
 if (Ti.Platform.name == 'iPhone OS'){
@@ -191,7 +211,7 @@ if (predictionType === 'single') {
 
 const About = () => {
   return (
-    <Container size="md" mt="xl">
+    <Container size="md" mt="xl" mb="xl">
       <Title order={1}>My Software Development Journey</Title>
       <Text size="xl" mt="lg">
         Software development is the latest chapter in my professional goal to
@@ -201,6 +221,17 @@ const About = () => {
         later, I'm embarking on a journey to build tools, troubleshoot, and
         create new efficiencies for the software community.
       </Text>
+      <CodeHighlightTabs
+        mt="lg"
+        code={[
+          {
+            code: calculatePi,
+            language: "java",
+            fileName: "exercise2.java",
+            icon: coffeeIcon,
+          },
+        ]}
+      />
 
       <Title mt="lg" order={3}>
         University of Michigan: Plain Language Medical Dictionary -- 2010
@@ -275,17 +306,21 @@ const About = () => {
         Teachers Are So Busy! -- 2016-2023
       </Title>
       <Text size="xl">
-        When I first arrived at my middle school, almost every major workflow
-        was paper-based. Absent student for a test? -- paper ticket goes into
-        folder. Major comprehensive exams? -- printed on paper, scanned and fed
-        through software to produce reports. Paper has some wonderful use cases,
-        but this definitely wasn't one of them. I quickly worked to digitize
-        many school processes, and became a go-to resource for other teachers
-        wanting to do the same. I spearheaded the adoption of Edulastic, so all
-        quizzes, tests and comprehensive exams could be completed on Chromebooks
-        with automatic grading. I created Google Sheets with query formulas
-        so each grade level could keep a central spreadsheet to track students
-        missing tests.
+        I wanted to pursue a passion for teaching, and took a position as an 8th
+        Grade History teacher in Columbus. When I started, almost every major
+        workflow was paper-based. Absent student for a test? -- paper ticket
+        goes into folder. Major comprehensive exams? -- printed on paper,
+        scanned and fed through software to produce reports. Paper has some
+        wonderful use cases, but this definitely wasn't one of them. I quickly
+        worked to digitize many school processes, and became a go-to resource
+        for other teachers wanting to do the same. I spearheaded the adoption of
+        {" "}<Anchor href="http://www.edulastic.com" target="_blank">
+          Edulastic
+        </Anchor>
+        , so all quizzes, tests and comprehensive exams could be completed on
+        Chromebooks with automatic grading. I created Google Sheets with query
+        formulas so each grade level could keep a central spreadsheet to track
+        students missing tests.
       </Text>
       <Text mt="lg" size="xl">
         During remote learning, there arose a heightened imperative for teachers
@@ -416,6 +451,25 @@ const About = () => {
         work through a two week final capstone where scrum masters and product
         managers scrutinize your work and give actionable feedback.
       </Text>
+      <Image
+        mt="lg"
+        src="https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/covermyshiftdashboard.jpeg"
+      />
+      <Card withBorder mt="sm">
+        <Text>
+          Over two weeks I built Cover My Shift on an Agile team, using my new
+          development skills to automate workflows in schools. Pictured above is
+          a{" "}
+          <Anchor
+            href="https://vuetifyjs.com/en/components/data-tables/basics/"
+            target="_blank"
+          >
+            Vuetify data table
+          </Anchor>
+          , with data cards and tabs to give school administrators rich
+          information on teacher absences.
+        </Text>
+      </Card>
       <Title mt="lg" order={3}>
         What's next?
       </Title>
@@ -435,8 +489,8 @@ const About = () => {
           students.
         </ListItem>
         <ListItem>
-          ParentGPT - An AI chatbot for parents that knows about their
-          child's school
+          ParentGPT - An AI chatbot for parents that knows about their child's
+          school
         </ListItem>
         <ListItem>
           VideoDeets - a cross platform desktop GUI application for video
@@ -448,6 +502,7 @@ const About = () => {
           spending by pacing on a daily basis.
         </ListItem>
       </List>
+      <Text mt="lg" size="lg">Stay tuned!</Text>
     </Container>
   );
 };
