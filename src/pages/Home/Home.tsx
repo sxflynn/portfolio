@@ -67,7 +67,7 @@ const Home = () => {
           <Card shadow="sm" padding="md" radius="lg" withBorder>
             <Grid>
               <Grid.Col span={{ base: 1, lg: 2 }}>
-                <ThemeIcon color="orange" variant="light">
+                <ThemeIcon variant="light">
                   {" "}
                   <IconBrandPython
                     style={{ width: rem(20), height: rem(20) }}
@@ -90,7 +90,7 @@ const Home = () => {
           <Card shadow="sm" padding="md" radius="lg" withBorder>
             <Grid>
               <Grid.Col span={{ base: 1, lg: 2 }}>
-                <ThemeIcon color="red" variant="light">
+                <ThemeIcon variant="light">
                   {" "}
                   <IconSql
                     style={{ width: rem(20), height: rem(20) }}
@@ -113,7 +113,7 @@ const Home = () => {
           <Card shadow="sm" padding="md" radius="lg" withBorder>
             <Grid>
               <Grid.Col span={{ base: 1, lg: 2 }}>
-                <ThemeIcon color="blue" variant="light">
+                <ThemeIcon variant="light">
                   {" "}
                   <IconBackpack
                     style={{ width: rem(20), height: rem(20) }}
