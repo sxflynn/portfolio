@@ -13,7 +13,7 @@ const CoverMyShiftProject = () => {
                     <Title className={classes.title}>
                         Cover My Shift
                     </Title>
-                    <Text c="dimmed" mt="md">
+                    <Text mt="md">
                         A full stack web application designed to help teachers and school administrators manage teacher absences.
                     </Text>
 

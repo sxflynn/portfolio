@@ -10,6 +10,7 @@ import {
   Image,
   Code,
   Card,
+  Space,
 } from "@mantine/core";
 import {
   IconApi,
@@ -503,6 +504,7 @@ const About = () => {
         </ListItem>
       </List>
       <Text mt="lg" size="lg">Stay tuned!</Text>
+      <Space h="xl" />
     </Container>
   );
 };

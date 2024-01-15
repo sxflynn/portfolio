@@ -47,7 +47,7 @@ const Home = () => {
         librarianship.
       </Text>
 
-      <Group mt="lg" mb="lg">
+      <Group mt="lg">
         <Anchor href='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/Stephen%20X%20Flynn%20resume%20portfolio.pdf'>
           <Button rightSection={<IconDownload size={16} />}>View Resume</Button>
         </Anchor>
@@ -59,7 +59,7 @@ const Home = () => {
         </Link>
       </Group>
 
-      <Text size="lg" mt="md" mb="md" fw="bold">
+      <Text size="lg" mt="xl" mb="md" fw="bold">
         Software Highlights
       </Text>
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>
@@ -76,7 +76,7 @@ const Home = () => {
                 </ThemeIcon>
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
-                <Text mt="10px">
+                <Text>
                   Within two weeks, created an Upper Arlington school board
                   election predictor in Python, with a React frontend, deployed
                   to Vercel. Correctly predicted election.
@@ -99,7 +99,7 @@ const Home = () => {
                 </ThemeIcon>
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
-                <Text mt="10px">
+                <Text>
                   Within two weeks, led a team to create a web application to
                   help teachers cover their shifts, using Java, PostgreSQL,
                   Vue.js, in an Agile work environment
@@ -122,7 +122,7 @@ const Home = () => {
                 </ThemeIcon>
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
-                <Text mt="10px">
+                <Text>
                   Graduated from intensive 3 month software development
                   bootcamp, learning object oriented programming, full stack
                   development through 800 hours of instruction
@@ -132,7 +132,7 @@ const Home = () => {
           </Card>
         </div>
       </SimpleGrid>
-      <Text size="lg" mt="md" mb="md" fw="bold">
+      <Text size="lg" mt="xl" mb="md" fw="bold">
         Career Highlights
       </Text>
 

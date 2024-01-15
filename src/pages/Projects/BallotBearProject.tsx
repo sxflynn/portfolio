@@ -14,7 +14,7 @@ const BallotBearProject = () => {
                     <Title className={classes.title}>
                         Upper Arlington School Board Election Simulator
                     </Title>
-                    <Text c="dimmed" mt="md">
+                    <Text mt="md">
                         React/Python web application to help an Upper Arlington voter predict who will win the November 2023 School Board election.
                     </Text>
 
