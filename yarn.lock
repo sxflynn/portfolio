@@ -344,10 +344,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mantine/core@7.3.2":
-  version "7.3.2"
-  resolved "https://registry.npmjs.org/@mantine/core/-/core-7.3.2.tgz"
-  integrity sha512-CwAuQogVLcLR7O9e1eOgi3gtk4XX6cnaqevAxzJJpIOIyCnHiQ3cEGINVXyUUjUUipBlvK3sqz3NPGJ2ekLFDQ==
+"@mantine/code-highlight@^7.4.1":
+  version "7.4.1"
+  resolved "https://registry.npmjs.org/@mantine/code-highlight/-/code-highlight-7.4.1.tgz"
+  integrity sha512-zfUZuwP2hXnz3BC1H2tH/clc00NS36XQMmkMeVLTKDl8mU3vMiDPxjsODvrieLbat7rUfqaD9mqhJShwCL1D/g==
+  dependencies:
+    clsx "2.0.0"
+    highlight.js "^11.9.0"
+
+"@mantine/core@^7.4.1", "@mantine/core@7.4.1":
+  version "7.4.1"
+  resolved "https://registry.npmjs.org/@mantine/core/-/core-7.4.1.tgz"
+  integrity sha512-crz9BemmwR8V/h6db9FgznCp0Ssp6rCUYkBBO4JprpH8NDSEblHyWcZZo43IuA1vZptp8eyrhRNJ4nfe8CAYFQ==
   dependencies:
     "@floating-ui/react" "^0.24.8"
     clsx "2.0.0"
@@ -356,10 +364,10 @@
     react-textarea-autosize "8.5.3"
     type-fest "^3.13.1"
 
-"@mantine/hooks@7.3.2":
-  version "7.3.2"
-  resolved "https://registry.npmjs.org/@mantine/hooks/-/hooks-7.3.2.tgz"
-  integrity sha512-xgumuuI3PBWXff5N02HCI7PEy25mDEdyXDQklUYK93J6FKwpcosyZnGVitoUrV1gLtYYa9ZudeAWdhHuh/CpOg==
+"@mantine/hooks@^7.4.1", "@mantine/hooks@7.4.1":
+  version "7.4.1"
+  resolved "https://registry.npmjs.org/@mantine/hooks/-/hooks-7.4.1.tgz"
+  integrity sha512-7gV9YR+xZ1L69MGVaSNwV0gaxIz4bCZuGxXTtnuaamDcO/4YiNDtmvdD7/jC/RTa1iJMnZ6YiYrcPXLOn+8saQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1093,6 +1101,11 @@ has-flag@^4.0.0:
   resolved "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
+highlight.js@^11.9.0:
+  version "11.9.0"
+  resolved "https://registry.npmjs.org/highlight.js/-/highlight.js-11.9.0.tgz"
+  integrity sha512-fJ7cW7fQGCYAkgv4CPfwFHrfd/cLS4Hau96JuJ+ZTOWhjnhoeN1ub1tFmALm/+lW5z4WCAuAV9bm05AP0mS6Gw==
+
 ignore@^5.2.0, ignore@^5.2.4:
   version "5.3.0"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.3.0.tgz"
@@ -1403,10 +1416,10 @@ postcss-nested@^6.0.1:
   dependencies:
     postcss-selector-parser "^6.0.11"
 
-postcss-preset-mantine@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.npmjs.org/postcss-preset-mantine/-/postcss-preset-mantine-1.12.0.tgz"
-  integrity sha512-WLsejZoNtsrpOEi/CItn98e+4NpgT/Av28XWfY0CqiWgd2NDOOxtEUNdPGtB33pGLwaV8FrhTpIhAIO8palTOw==
+postcss-preset-mantine@1.12.3:
+  version "1.12.3"
+  resolved "https://registry.npmjs.org/postcss-preset-mantine/-/postcss-preset-mantine-1.12.3.tgz"
+  integrity sha512-cCwowf20mIyRXnV1cSVoMGfhYgy8ZqFJWsEJthdMZ3n7LijjucE9l/HO47gv5gAtr9nY1MkaEkpWS7ulhSTbSg==
   dependencies:
     postcss-mixins "^9.0.4"
     postcss-nested "^6.0.1"
