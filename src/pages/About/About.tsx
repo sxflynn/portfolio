@@ -30,8 +30,8 @@ const cloudIcon = <IconCloudComputing />;
 const jsxIcon = <IconFileTypeJsx />;
 const coffeeIcon = <IconCoffee />;
 
-const calculatePi = `
-//Authored by Stephen Flynn for CMSC 150, April 2009
+const calculatePi = 
+`//Authored by Stephen Flynn for CMSC 150, April 2009
 public static void main(String[] args) {
     double x = Math.sqrt(0.5 + (0.5 * Math.sqrt(0.5)));
     int N = 0;
@@ -48,7 +48,8 @@ public static void main(String[] args) {
 }
 `;
 
-const plainMedCode = `// Titanium Mobile SDK -- create search bar with OS targeting
+const plainMedCode = 
+`// Titanium Mobile SDK -- create search bar with OS targeting
 if (Ti.Platform.name == 'iPhone OS'){
 	var search = Titanium.UI.createSearchBar({
 	showCancel:false,
@@ -69,8 +70,8 @@ var tableview = Titanium.UI.createTableView({
 
 `;
 
-const kickstartCode = `
-//Function: this is the main function that checks if the ISSN is a journal which permits publisher PDF archiving
+const kickstartCode = 
+`//Function: this is the main function that checks if the ISSN is a journal which permits publisher PDF archiving
 function pubpdf(issn) {  
  var text = getXML(issn);
    // checks to see if the issn is invalid
@@ -88,7 +89,8 @@ function pubpdf(issn) {
 }
 `;
 
-const schoolProbabilityCode = `=SUM(
+const schoolProbabilityCode = 
+`=SUM(
     (B9 * (1 - $R$12)),     // Weighs the previous trimester completion average at 20% (1 - 0.8)
     IFNA(
         IF(                 // Checks if yesterday's assignment is completed. 
@@ -106,7 +108,8 @@ const schoolProbabilityCode = `=SUM(
     ) * ($R$12 / 2)         //  If yes, adds the remaining half of the weight (40%)                         
 )`;
 
-const schoolAlertModelCode = `=IFNA(
+const schoolAlertModelCode = 
+`=IFNA(
     IFS(
         N9=O9, "",                                  
         AND(OR(N9="❌")=True, O9="✔️")=True, "🥳",  // If the projection was "❌" and the actual result was "✔️". 
@@ -118,7 +121,8 @@ const schoolAlertModelCode = `=IFNA(
 )
 `;
 
-const electionOriginal = `# first iteration of election script
+const electionOriginal = 
+`# first iteration of election script
 def vote(profile):
     if profile=='Dem':
         voterPref = demPrefs
@@ -142,7 +146,8 @@ def vote(profile):
     voteCast = list(voteCastDict.keys())
     return voteCast`;
 
-const electionMain = `# FastAPI entrypoint with Pydantic validation for the ElectionSimulator class
+const electionMain = 
+`# FastAPI entrypoint with Pydantic validation for the ElectionSimulator class
 @app.post("/election", response_model=ElectionResponse)
 def multielection(config: Config):
     election_simulator = ElectionSimulator(config)
