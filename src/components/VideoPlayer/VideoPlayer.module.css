@@ -13,7 +13,7 @@ video{
 
   @media (max-width: $mantine-breakpoint-sm) {
     display:flex;
-
+    min-width: auto;
     height: auto; 
     margin: auto;
     align-content: center;
