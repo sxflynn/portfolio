@@ -30,8 +30,7 @@ const cloudIcon = <IconCloudComputing />;
 const jsxIcon = <IconFileTypeJsx />;
 const coffeeIcon = <IconCoffee />;
 
-const calculatePi = 
-`//Authored by Stephen Flynn for CMSC 150, April 2009
+const calculatePi = `//Authored by Stephen Flynn for CMSC 150, April 2009
 public static void main(String[] args) {
     double x = Math.sqrt(0.5 + (0.5 * Math.sqrt(0.5)));
     int N = 0;
@@ -48,8 +47,7 @@ public static void main(String[] args) {
 }
 `;
 
-const plainMedCode = 
-`// Titanium Mobile SDK -- create search bar with OS targeting
+const plainMedCode = `// Titanium Mobile SDK -- create search bar with OS targeting
 if (Ti.Platform.name == 'iPhone OS'){
 	var search = Titanium.UI.createSearchBar({
 	showCancel:false,
@@ -70,8 +68,7 @@ var tableview = Titanium.UI.createTableView({
 
 `;
 
-const kickstartCode = 
-`//Function: this is the main function that checks if the ISSN is a journal which permits publisher PDF archiving
+const kickstartCode = `//Function: this is the main function that checks if the ISSN is a journal which permits publisher PDF archiving
 function pubpdf(issn) {  
  var text = getXML(issn);
    // checks to see if the issn is invalid
@@ -89,8 +86,7 @@ function pubpdf(issn) {
 }
 `;
 
-const schoolProbabilityCode = 
-`=SUM(
+const schoolProbabilityCode = `=SUM(
     (B9 * (1 - $R$12)),     // Weighs the previous trimester completion average at 20% (1 - 0.8)
     IFNA(
         IF(                 // Checks if yesterday's assignment is completed. 
@@ -108,8 +104,7 @@ const schoolProbabilityCode =
     ) * ($R$12 / 2)         //  If yes, adds the remaining half of the weight (40%)                         
 )`;
 
-const schoolAlertModelCode = 
-`=IFNA(
+const schoolAlertModelCode = `=IFNA(
     IFS(
         N9=O9, "",                                  
         AND(OR(N9="❌")=True, O9="✔️")=True, "🥳",  // If the projection was "❌" and the actual result was "✔️". 
@@ -121,8 +116,7 @@ const schoolAlertModelCode =
 )
 `;
 
-const electionOriginal = 
-`# first iteration of election script
+const electionOriginal = `# first iteration of election script
 def vote(profile):
     if profile=='Dem':
         voterPref = demPrefs
@@ -146,8 +140,7 @@ def vote(profile):
     voteCast = list(voteCastDict.keys())
     return voteCast`;
 
-const electionMain = 
-`# FastAPI entrypoint with Pydantic validation for the ElectionSimulator class
+const electionMain = `# FastAPI entrypoint with Pydantic validation for the ElectionSimulator class
 @app.post("/election", response_model=ElectionResponse)
 def multielection(config: Config):
     election_simulator = ElectionSimulator(config)
@@ -319,8 +312,8 @@ const About = () => {
         scanned and fed through software to produce reports. Paper has some
         wonderful use cases, but this definitely wasn't one of them. I quickly
         worked to digitize many school processes, and became a go-to resource
-        for other teachers wanting to do the same. I spearheaded the adoption of
-        {" "}<Anchor href="http://www.edulastic.com" target="_blank">
+        for other teachers wanting to do the same. I spearheaded the adoption of{" "}
+        <Anchor href="http://www.edulastic.com" target="_blank">
           Edulastic
         </Anchor>
         , so all quizzes, tests and comprehensive exams could be completed on
@@ -463,9 +456,9 @@ const About = () => {
       />
       <Card withBorder mt="sm">
         <Text>
-          Over two weeks I built Cover My Shift on an Agile team, using my new
-          development skills to automate workflows in schools. Pictured above is
-          a{" "}
+          Over two weeks I built Cover My Shift on an Agile team alongside Gregg
+          Sanders, Anisa Mohamud and Niko Tatakis, to automate critical workflows in
+          schools. Pictured above is a{" "}
           <Anchor
             href="https://vuetifyjs.com/en/components/data-tables/basics/"
             target="_blank"
@@ -508,7 +501,9 @@ const About = () => {
           spending by pacing on a daily basis.
         </ListItem>
       </List>
-      <Text mt="lg" size="lg">Stay tuned!</Text>
+      <Text mt="lg" size="lg">
+        Stay tuned!
+      </Text>
       <Space h="xl" />
     </Container>
   );
