@@ -20,8 +20,8 @@
 - Cypress tests to prevent unexpected breaking changes
 - GitHub Actions integration with tests
 
-## Content Feedback
+## Contributing
+### Content
 If you have any feedback about how to make the website better deliver its purpose, please feel free message me directly.
-
-## Technical feedback
+### Technical issues
 If you notice a bug, error, or other issue please feel free to open an issue or submit a pull request.
