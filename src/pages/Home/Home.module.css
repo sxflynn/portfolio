@@ -55,15 +55,7 @@
     padding: rem(4px) rem(12px);
   }
 
-  
-  .change-text {
-    display: inline-block;
-    animation: flip 1s ease-in-out;
+    
+  .gridFix{
+    max-width:none!important
   }
-
-  @keyframes flip {
-    0% { transform: rotateX(0); }
-    50% { transform: rotateX(-90deg); }
-    100% { transform: rotateX(0); }
-  }
-  

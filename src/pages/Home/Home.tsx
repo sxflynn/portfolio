@@ -64,9 +64,9 @@ const Home = () => {
       </Text>
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }}>
         <div>
-          <Card shadow="sm" padding="md" radius="lg" withBorder>
+          <Card shadow="sm" radius="lg" withBorder>
             <Grid>
-              <Grid.Col span={{ base: 1, lg: 2 }}>
+              <Grid.Col className={classes.gridFix} span={{ base: 1, lg: 2 }}>
                 <ThemeIcon variant="light">
                   {" "}
                   <IconBrandPython
@@ -89,7 +89,7 @@ const Home = () => {
         <div>
           <Card shadow="sm" padding="md" radius="lg" withBorder>
             <Grid>
-              <Grid.Col span={{ base: 1, lg: 2 }}>
+              <Grid.Col className={classes.gridFix} span={{ base: 1, lg: 2 }}>
                 <ThemeIcon variant="light">
                   {" "}
                   <IconSql
@@ -112,7 +112,7 @@ const Home = () => {
         <div>
           <Card shadow="sm" padding="md" radius="lg" withBorder>
             <Grid>
-              <Grid.Col span={{ base: 1, lg: 2 }}>
+              <Grid.Col className={classes.gridFix} span={{ base: 1, lg: 2 }}>
                 <ThemeIcon variant="light">
                   {" "}
                   <IconBackpack
