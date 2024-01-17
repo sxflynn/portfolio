@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Menu, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link, NavLink, useLocation } from 'react-router-dom';
@@ -18,6 +18,10 @@ export function Header() {
   const location = useLocation();
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(location.pathname);
+
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location]);
 
   const dropdownMenuItems = links.map((link) => {
     const isExternalLink = link.link.startsWith('http');
@@ -42,6 +46,7 @@ export function Header() {
         href={link.link}
         className={classes.link}
         rel="noopener noreferrer"
+        target="_blank"
       >
         {link.label} <IconExternalLink size={14} />
       </a>

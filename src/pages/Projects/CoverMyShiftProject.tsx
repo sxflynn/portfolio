@@ -49,7 +49,7 @@ const CoverMyShiftProject = () => {
                                     <IconBrandVue style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                                 </ThemeIcon>
                             }>
-                            <b>Vue.js frontend</b> – Implemented <Code>Vuetify.js</Code> UI library, <Code>VueX</Code> for statement management and dispatches, <Code>Axios</Code> for http requests. Built with Vite.
+                            <b>Vue frontend</b> – Implemented <Code>Vuetify.js</Code> UI library, <Code>VueX</Code> for state management and dispatches, <Code>Axios</Code> for http requests. Built with Vite.
                         </List.Item>
                     </List>
 

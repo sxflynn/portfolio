@@ -47,7 +47,7 @@ public static void main(String[] args) {
 }
 `;
 
-const plainMedCode = `// Titanium Mobile SDK -- create search bar with OS targeting
+const plainMedCode = `// Titanium Mobile SDK — create search bar with OS targeting
 if (Ti.Platform.name == 'iPhone OS'){
 	var search = Titanium.UI.createSearchBar({
 	showCancel:false,
@@ -133,9 +133,6 @@ def vote(profile):
                 ballotChoice[k]+=1
                 
     prefSorted = sorted(ballotChoice.items(), key=lambda x: x[1], reverse=True)
-#     for k, v in prefSorted:
-#         print (k + ' is receiving ' + str(v))
-
     voteCastDict = dict(prefSorted[0:2])
     voteCast = list(voteCastDict.keys())
     return voteCast`;
@@ -226,14 +223,14 @@ const About = () => {
           {
             code: calculatePi,
             language: "java",
-            fileName: "exercise2.java",
+            fileName: "calculatePi.java",
             icon: coffeeIcon,
           },
         ]}
       />
 
       <Title mt="lg" order={3}>
-        University of Michigan: Plain Language Medical Dictionary -- 2010
+        University of Michigan: Plain Language Medical Dictionary — 2010
       </Title>
       <Text size="xl">
         I worked a reference desk student job at Michigan's Health Science
@@ -267,15 +264,14 @@ const About = () => {
         ]}
       />
       <Title mt="lg" order={3}>
-        Kickstarting Institutional Repositories -- 2011-2013
+        Kickstarting Institutional Repositories — 2011-2013
       </Title>
       <Text size="xl">
         In my new career as Emerging Technologies Librarian, I used my coding
         skills to automate workflows for institutional repositories. The College
-        of Wooster had recently invested in an institutional repository that was
-        in need of high quality content. I successfully led the effort to create
-        a digital submission requirement for Senior Independent Study Theses,
-        undergraduate capstone projects that would find a permanent digital home
+        of Wooster had recently deployed a DSpace repository needed
+        high quality content. I successfully led the effort to create a digital
+        submission requirement for undergraduate capstone projects that would find a permanent digital home
         in our repository. Next, we began to recruit faculty members to upload
         their research to promote open access publishing. Many journals allow
         their authors to publish their peer reviewed drafts (aka post-prints) to
@@ -302,17 +298,17 @@ const About = () => {
       />
 
       <Title mt="lg" order={3}>
-        Teachers Are So Busy! -- 2016-2023
+        Teachers Are So Busy! — 2016-2023
       </Title>
       <Text size="xl">
         I wanted to pursue a passion for teaching, and took a position as an 8th
         Grade History teacher in Columbus. When I started, almost every major
-        workflow was paper-based. Absent student for a test? -- paper ticket
-        goes into folder. Major comprehensive exams? -- printed on paper,
-        scanned and fed through software to produce reports. Paper has some
-        wonderful use cases, but this definitely wasn't one of them. I quickly
-        worked to digitize many school processes, and became a go-to resource
-        for other teachers wanting to do the same. I spearheaded the adoption of{" "}
+        workflow was paper-based. Absent student for a test? — paper ticket goes
+        into folder. Major comprehensive exams? — printed on paper, scanned and
+        fed through software to produce reports. Paper has some wonderful use
+        cases, but this definitely wasn't one of them. I quickly worked to
+        digitize many school processes, and became a go-to resource for other
+        teachers wanting to do the same. I spearheaded the adoption of{" "}
         <Anchor href="http://www.edulastic.com" target="_blank">
           Edulastic
         </Anchor>
@@ -359,7 +355,7 @@ const About = () => {
         </Text>
       </Card>
       <Title mt="lg" order={3}>
-        Local Elections Needed More Attention -- 2021 - 2023
+        Local Elections Needed More Attention — 2021 - 2023
       </Title>
       <Text size="xl">
         In 2021 Upper Arlington's contentious school board election received
@@ -434,7 +430,7 @@ const About = () => {
         model ended up correctly predicting 2 out of 3 of the eventual winners.
       </Text>
       <Title mt="lg" order={3}>
-        It's time to finally become a software developer - 2023
+        It's time to finally become a software developer — late 2023
       </Title>
       <Text size="xl">
         The move to pursue a software developer career felt like the logical
@@ -445,8 +441,9 @@ const About = () => {
         campus, where I became immersed in objective oriented programming,
         RESTful API design, model view controller design and test-driven
         development. I learned Java, Spring Boot, PostgreSQL, CSS, and
-        JavaScript / Vue.js. Tech Elevator also exposes its students to the
-        softer side of programming, like pair programming and using Agile to
+        JavaScript / Vue, and also applied what I learned to Python OOP structures and React for the
+        `election.py` side project. Tech Elevator also exposes its students to
+        pair programming and using Agile to
         work through a two week final capstone where scrum masters and product
         managers scrutinize your work and give actionable feedback.
       </Text>
@@ -457,8 +454,8 @@ const About = () => {
       <Card withBorder mt="sm">
         <Text>
           Over two weeks I built Cover My Shift on an Agile team alongside Gregg
-          Sanders, Anisa Mohamud and Niko Tatakis, to automate critical workflows in
-          schools. Pictured above is a{" "}
+          Sanders, Anisa Mohamud and Niko Tatakis, to automate critical
+          workflows in schools. Pictured above is a{" "}
           <Anchor
             href="https://vuetifyjs.com/en/components/data-tables/basics/"
             target="_blank"
@@ -473,35 +470,34 @@ const About = () => {
         What's next?
       </Title>
       <Text size="xl">
-        I’m currently searching for my first role as a full time software
-        developer. While I network and apply to jobs, I will be continuing to
-        build projects that can make a real world impact. Here are some of the
-        ideas I will make progress on:
+        I want to continue building projects that expand my skills and make
+        a real world impact. While I explore various opportunities to become a
+        professional developer, here are some of the projects I'm working on:
       </Text>
       <List withPadding mt="sm" size="xl">
         <ListItem>
           BallotBear updates - Add authentication, custom profiles, refresh the
-          UI using a UI library,
+          UI using a UI library
         </ListItem>
         <ListItem>
           TeacherGPT - An AI chatbot for teachers that knows about their
-          students.
+          students
         </ListItem>
         <ListItem>
           ParentGPT - An AI chatbot for parents that knows about their child's
           school
         </ListItem>
         <ListItem>
-          VideoDeets - a cross platform desktop GUI application for video
+          VideoDeets - A cross platform desktop GUI application for video
           professionals and enthusiasts that can display, sort and filter video
-          files using technical metadata.
+          files with technical metadata using <Code>ffprobe</Code>
         </ListItem>
         <ListItem>
           A manual entry budgeting application that helps consumers manage their
-          spending by pacing on a daily basis.
+          spending by pacing on a daily basis
         </ListItem>
       </List>
-      <Text mt="lg" size="lg">
+      <Text mt="lg" size="xl">
         Stay tuned!
       </Text>
       <Space h="xl" />

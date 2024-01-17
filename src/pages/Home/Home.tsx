@@ -37,7 +37,7 @@ const Home = () => {
         >
           full stack software developer
         </Text>{" "}
-        based in Columbus, Ohio. <IconBuildingSkyscraper size={30} />
+        based in Columbus, Ohio <IconBuildingSkyscraper size={30} />
       </h1>
       <Text size="lg">
         I'm passionate about creating web applications with Java, Spring Boot,
@@ -54,7 +54,7 @@ const Home = () => {
         <Link to="/projects">
           <Button>View Projects</Button>
         </Link>
-        <Link to="/about/">
+        <Link to="/about">
           <Button>More About Me</Button>
         </Link>
       </Group>
@@ -77,9 +77,9 @@ const Home = () => {
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
                 <Text>
-                  Within two weeks, created an Upper Arlington school board
-                  election predictor in Python, with a React frontend, deployed
-                  to Vercel. Correctly predicted election.
+                  Within two weeks, created a web application to correctly
+                  predict the Upper Arlington school board election, built in
+                  Python, React, and deployed to Vercel.
                 </Text>
               </Grid.Col>
             </Grid>
@@ -101,8 +101,8 @@ const Home = () => {
               <Grid.Col span={{ base: 10, lg: 10 }}>
                 <Text>
                   Within two weeks, led a team to create a web application to
-                  help teachers cover their shifts, using Java, PostgreSQL,
-                  Vue.js, in an Agile work environment
+                  help teachers cover their shifts, using Java, PostgreSQL, Vue,
+                  in an Agile work environment
                 </Text>
               </Grid.Col>
             </Grid>
@@ -123,7 +123,7 @@ const Home = () => {
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
                 <Text>
-                  Graduated from intensive 3 month software development
+                  Graduated from intensive three month software development
                   bootcamp, learning object oriented programming, full stack
                   development through 800 hours of instruction
                 </Text>
@@ -147,10 +147,10 @@ const Home = () => {
       >
         <ListItem>Tech Elevator full stack coding boot camp graduate</ListItem>
         <ListItem>
-          7 years middle history school teacher, promoted to Technology Chair and Grade
-          Level Chair
+          Seven years middle history school teacher, promoted to Technology Chair
+          and Grade Level Chair
         </ListItem>
-        <ListItem>5 years as Emerging Technologies Librarian</ListItem>
+        <ListItem>Five years as Emerging Technologies Librarian</ListItem>
         <ListItem>
           Master's Degrees in Computer Education Technology, and Library
           Information Science
