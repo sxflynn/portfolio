@@ -249,8 +249,8 @@ const About = () => {
       </Text>
 
       <Group mt="lg" justify="center">
-        <Image src="https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/plainmed-left.png" />
-        <Image src="https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/plainmed-right.png" />
+        <Image src="https://assets.sxflynn.net/plainmed-left.png" />
+        <Image src="https://assets.sxflynn.net/plainmed-right.png" />
       </Group>
 
       <CodeHighlightTabs
@@ -449,7 +449,7 @@ const About = () => {
       </Text>
       <Image
         mt="lg"
-        src="https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/covermyshiftdashboard.jpeg"
+        src="https://assets.sxflynn.net/covermyshiftdashboard.jpeg"
       />
       <Card withBorder mt="sm">
         <Text>

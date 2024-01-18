@@ -79,8 +79,8 @@ const BallotBearProject = () => {
                     </Group>
                 </div>
                 <VideoPlayer 
-                src='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/ballotbear-demo.mp4'
-                src2x='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/ballotbear-demo@2x.mp4'
+                src='https://assets.sxflynn.net/ballotbear-demo.mp4'
+                src2x='https://assets.sxflynn.net/ballotbear-demo@2x.mp4'
                 allowDimming={true}
                 />
         </div>

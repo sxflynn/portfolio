@@ -70,8 +70,8 @@ const CoverMyShiftProject = () => {
                 </div>
                 
                 <VideoPlayer 
-                src='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/covermyshift-demo.mp4'
-                src2x='https://pub-0d39c7af531f4456b2a0bb4b5d58306e.r2.dev/covermyshift-demo@2x.mp4'
+                src='https://assets.sxflynn.net/covermyshift-demo.mp4'
+                src2x='https://assets.sxflynn.net/covermyshift-demo@2x.mp4'
                 allowDimming={true}
                 />
 
