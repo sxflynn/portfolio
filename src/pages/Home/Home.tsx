@@ -48,7 +48,7 @@ const Home = () => {
       </Text>
 
       <Group mt="lg">
-        <Anchor href='https://assets.sxflynn.net/Stephen%20X%20Flynn%20resume%20portfolio.pdf'>
+        <Anchor href="https://assets.sxflynn.net/Stephen%20X%20Flynn%20resume%20portfolio.pdf">
           <Button rightSection={<IconDownload size={16} />}>View Resume</Button>
         </Anchor>
         <Link to="/projects">
@@ -77,9 +77,9 @@ const Home = () => {
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
                 <Text>
-                  Within two weeks, created a web application to correctly
-                  predict the Upper Arlington school board election, built in
-                  Python, React, and deployed to Vercel.
+                  Created a web application to correctly predict the Upper
+                  Arlington school board election, built in Python, FastAPI,
+                  React, and deployed to Vercel
                 </Text>
               </Grid.Col>
             </Grid>
@@ -100,9 +100,9 @@ const Home = () => {
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
                 <Text>
-                  Within two weeks, led a team to create a web application to
-                  help teachers cover their shifts, using Java, PostgreSQL, Vue,
-                  in an Agile work environment
+                  Led a team to create a web application to help teachers
+                  cover their shifts, using Java, Spring Boot, PostgreSQL, Vue,
+                  using test-driven development
                 </Text>
               </Grid.Col>
             </Grid>
@@ -123,9 +123,7 @@ const Home = () => {
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
                 <Text>
-                  Graduated from intensive three month software development
-                  bootcamp, learning object oriented programming, full stack
-                  development through 800 hours of instruction
+                  Graduated from 14 week software development bootcamp — emphasis on pair programming, Agile methodology and test-driven development
                 </Text>
               </Grid.Col>
             </Grid>
@@ -147,8 +145,8 @@ const Home = () => {
       >
         <ListItem>Tech Elevator full stack coding boot camp graduate</ListItem>
         <ListItem>
-          Seven years middle history school teacher, promoted to Technology Chair
-          and Grade Level Chair
+          Seven years middle history school teacher, promoted to Technology
+          Chair and Grade Level Chair
         </ListItem>
         <ListItem>Five years as Emerging Technologies Librarian</ListItem>
         <ListItem>
