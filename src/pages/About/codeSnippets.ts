@@ -13,74 +13,76 @@ const codeSnippets = {
         product = (product * Math.sqrt(0.5));
         double pi = (2.0 / product);
         System.out.println("Pi is approxiately: " + pi);
-    }
-    `,
+    }`,
   plainMedCode: `// Titanium Mobile SDK — create search bar with OS targeting
-  if (Ti.Platform.name == 'iPhone OS') {
-      // Created in 2010, before ES6 let/const
-      var search = Titanium.UI.createSearchBar({
-          showCancel: false,
-          hintText: "Type a medical term"
-      });
+  if (Ti.Platform.name == "iPhone OS") {
+    // Created in 2010, before ES6 let/const
+    var search = Titanium.UI.createSearchBar({
+      showCancel: false,
+      hintText: "Type a medical term",
+    });
   } else {
-      var search = Titanium.UI.createSearchBar({
-          showCancel: true,
-          hintText: "Type a medical term"
-      });
+    var search = Titanium.UI.createSearchBar({
+      showCancel: true,
+      hintText: "Type a medical term",
+    });
   }
   // create table view
   var tableview = Titanium.UI.createTableView({
-      data: data,
-      search: search,
-      color: '#000',
-      filterAttribute: 'title'
-  });`,
+    data: data,
+    search: search,
+    color: "#000",
+    filterAttribute: "title",
+  });
+  `,
   kickstartCode: `// Returns whether ISSN is a journal which permits publisher PDF archiving
   function pubpdf(issn) {
-      // Created in 2013, before ES6 let/const
-      var text = getXML(issn);
-      // checks to see if the issn is invalid
-      var failText = text.search("<outcome>failed</outcome>");
-      var notfound = text.search("<outcome>notFound</outcome>");
-      // checks to see if the issn is missing
-      if (issn == 00000000 || issn == 0000 - 0000 || issn == "") {
-          return ("blank ISSN")
-      } else if (failText > 0) {
-          return ("ISSN invalid")
-      } else if (notfound > -1) {
-          return ("not found")
-      } else if (failText == -1) {
-          return permPdfGet(text);
-      }
-  }`,
-  schoolProbabilityCode: `=SUM(
-    (B9 * (1 - $R$12)),     // Weighs the previous trimester completion average at 20% (1 - 0.8)
+    // Created in 2013, before ES6 let/const
+    var text = getXML(issn);
+    // checks to see if the issn is invalid
+    var failText = text.search("<outcome>failed</outcome>");
+    var notfound = text.search("<outcome>notFound</outcome>");
+    // checks to see if the issn is missing
+    if (issn == 00000000 || issn == 0000 - 0000 || issn == "") {
+      return "blank ISSN";
+    } else if (failText > 0) {
+      return "ISSN invalid";
+    } else if (notfound > -1) {
+      return "not found";
+    } else if (failText == -1) {
+      return permPdfGet(text);
+    }
+  }
+  `,
+  schoolProbabilityCode: `= SUM(
+    (B9 * (1 - $R$12)), // Weighs the previous trimester completion average at 20% (1 - 0.8)
     IFNA(
-        IF(                 // Checks if yesterday's assignment is completed. 
-            VLOOKUP(A9, Grades!$A$2:$CK$78, ($R$6-2), 0) = "✔️", 
+        IF( // Checks if yesterday's assignment is completed. 
+            VLOOKUP(A9, Grades!$A$2: $CK$78, ($R$6 - 2), 0) = "✔️",
             1
-        ), 
+        ),
         0
-    ) * ($R$12 / 2),        // Adds to the weight 40% 
+    ) * ($R$12 / 2), // Adds to the weight 40% 
     IFNA(
-        IF(                 // Checks if the assignment from 4 days ago is completed.
-            VLOOKUP(A9, Grades!$A$2:$CK$78, ($R$6-8), 0) = "✔️", 
+        IF( // Checks if the assignment from 4 days ago is completed.
+            VLOOKUP(A9, Grades!$A$2: $CK$78, ($R$6 - 8), 0) = "✔️",
             1
-        ), 
+        ),
         0
-    ) * ($R$12 / 2)         //  If yes, adds the remaining half of the weight (40%)                         
+    ) * ($R$12 / 2) //  If yes, adds the remaining half of the weight (40%)                         
 )`,
-  schoolAlertModelCode: `=IFNA(
+  schoolAlertModelCode: `= IFNA(
     IFS(
-        N9=O9, "",                                  
-        AND(OR(N9="❌")=True, O9="✔️")=True, "🥳",  // If the projection was "❌" and the actual result was "✔️". 
-                                                  // Returns "🥳"
+        N9 = O9, "",
+        AND(OR(N9 = "❌") = True, O9 = "✔️") = True, "🥳", 
+        // If the projection was "❌" and the actual result was "✔️". 
+        // Returns "🥳"
 
-        AND(N9="✔️", O9="❌")=True, "😡"  // If the projection was "✔️" and the actual result was "❌". 
-                                         // Returns "😡"
+        AND(N9 = "✔️", O9 = "❌") = True, "😡" 
+        // If the projection was "✔️" and the actual result was "❌". 
+        // Returns "😡"
     )
-)
-`,
+)`,
   electionOriginal: `# first iteration of election script
 def vote(profile):
     if profile=='Dem':
@@ -130,43 +132,45 @@ def multielection(config: Config):
     return election_response
 `,
   appJsx: `// calls POST request and processes response from FastAPI function
-const performSimulation = async () => {
-    console.log('Load submit animation');
-let endpoint;
-if (predictionType === 'single') {
-    endpoint = '/one_election';
-    console.log('single election');
-} else if (predictionType === 'multi') {
-    endpoint = '/election';
-    console.log('multi election');
-}
-  try {
-    if (predictionType === 'single') {
-        endpoint = '/one_election';
-        console.log('single election');
-    } else if (predictionType === 'multi') {
-        endpoint = '/election';
-        console.log('multi election');
+  const performSimulation = async () => {
+    console.log("Load submit animation");
+    let endpoint;
+    if (predictionType === "single") {
+      endpoint = "/one_election";
+      console.log("single election");
+    } else if (predictionType === "multi") {
+      endpoint = "/election";
+      console.log("multi election");
     }
-    const response = await fetch(\`https://fastapi-election.fly.dev\${endpoint}\`, {
-          method: 'POST',
+    try {
+      if (predictionType === "single") {
+        endpoint = "/one_election";
+        console.log("single election");
+      } else if (predictionType === "multi") {
+        endpoint = "/election";
+        console.log("multi election");
+      }
+      const response = await fetch(
+        \`https://fastapi-election.fly.dev\${endpoint}\`,
+        {
+          method: "POST",
           headers: {
-              'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(data)
-      });
+          body: JSON.stringify(data),
+        }
+      );
       const responseData = await response.json();
       setResponse(responseData);
-      console.log('Successful fetch'); 
+      console.log("Successful fetch");
       setIsSubmitted(true);
-  } catch (error) {
-      console.error('Error making POST request:', error);
-      setError('Error making POST request. Please try again.');
-  }
-  setIsLoading(false);
-  console.log('Loading state ended');
-}
-`,
+    } catch (error) {
+      console.error("Error making POST request:", error);
+      setError("Error making POST request. Please try again.");
+    }
+    setIsLoading(false);
+    console.log("Loading state ended");
+  };`,
 };
 
 export default codeSnippets;
