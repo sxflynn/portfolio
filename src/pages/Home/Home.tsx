@@ -7,7 +7,6 @@ import {
   ListItem,
   ThemeIcon,
   rem,
-  Anchor,
   Grid,
   Card,
   SimpleGrid,
@@ -46,17 +45,19 @@ const Home = () => {
         previous successful careers in classroom teaching and technology
         librarianship.
       </Text>
-
       <Group mt="lg">
-        <Anchor href="https://assets.sxflynn.net/Stephen%20X%20Flynn%20resume%20portfolio.pdf">
-          <Button rightSection={<IconDownload size={16} />}>View Resume</Button>
-        </Anchor>
-        <Link to="/projects">
-          <Button>View Projects</Button>
-        </Link>
-        <Link to="/about">
-          <Button>More About Me</Button>
-        </Link>
+        <Button
+          component="a"
+          href="https://assets.sxflynn.net/Stephen%20X%20Flynn%20resume%20portfolio.pdf"
+          target="_blank"
+          rightSection={<IconDownload size={16} />}
+        >
+          View Resume
+        </Button>
+        <Button component={Link} to="/projects">
+          View Projects
+        </Button>
+          <Button component={Link} to="/about">More About Me</Button>
       </Group>
 
       <Text size="lg" mt="xl" mb="md" fw="bold">
@@ -100,9 +101,9 @@ const Home = () => {
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
                 <Text>
-                  Led a team to create a web application to help teachers
-                  cover their shifts, using Java, Spring Boot, PostgreSQL, Vue,
-                  using test-driven development
+                  Led a team to create a web application to help teachers cover
+                  their shifts, using Java, Spring Boot, PostgreSQL, Vue, using
+                  test-driven development
                 </Text>
               </Grid.Col>
             </Grid>
@@ -123,7 +124,9 @@ const Home = () => {
               </Grid.Col>
               <Grid.Col span={{ base: 10, lg: 10 }}>
                 <Text>
-                  Graduated from 14 week software development bootcamp — emphasis on pair programming, Agile methodology and test-driven development
+                  Graduated from 14 week software development bootcamp —
+                  emphasis on pair programming, Agile methodology and
+                  test-driven development
                 </Text>
               </Grid.Col>
             </Grid>
