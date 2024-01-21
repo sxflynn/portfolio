@@ -35,7 +35,7 @@ const codeSnippets = {
       color: '#000',
       filterAttribute: 'title'
   });`,
-  kickstartCode: `//Function: this is the main function that checks if the ISSN is a journal which permits publisher PDF archiving
+  kickstartCode: `// Returns whether ISSN is a journal which permits publisher PDF archiving
   function pubpdf(issn) {
       // Created in 2013, before ES6 let/const
       var text = getXML(issn);
