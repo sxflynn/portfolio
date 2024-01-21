@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { LoadingOverlay, useMantineColorScheme } from '@mantine/core'
+import { getHotkeyHandler } from '@mantine/hooks';
 import classes from './VideoPlayer.module.css';
 
 type VideoPlayerProps = {
@@ -52,12 +53,15 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcT
     
 
     return (
-        <div className={classes.videoContainer} onClick={togglePlayPause}>
+        <div className={classes.videoContainer}
+        onClick={togglePlayPause}
+        >
             <LoadingOverlay 
             visible={isLoading}
             loaderProps={{ type: 'dots' }}
             />
             <video 
+            tabIndex={0}
             className={`${(isDark && allowDimming) ? classes.dimmedVideo : ''}`} 
             ref={videoRef} 
             autoPlay 
@@ -66,6 +70,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, src2x, freeSrc, freeSrcT
             playsInline={playsInline}
             onLoadStart={onVideoLoadStart}
             onCanPlay={onVideoCanPlay}
+            onKeyDown={getHotkeyHandler([
+                ['Enter', togglePlayPause],
+              ])}
             >
                 <source src={selectedSrc} type={type} />
                 {freeSrc && <source src={freeSrc} type={freeSrcType} />}
