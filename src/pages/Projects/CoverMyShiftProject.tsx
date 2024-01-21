@@ -1,7 +1,6 @@
 import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } from '@mantine/core';
 import { IconCheck, IconExternalLink, IconCoffee, IconSql, IconBrandVue} from '@tabler/icons-react';
 import classes from './Projects.module.css'
-import ExternalLink from '../../components/ExternalLink';
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 
 const CoverMyShiftProject = () => {
@@ -54,9 +53,9 @@ const CoverMyShiftProject = () => {
                     </List>
 
                     <Group mt={30}>
-                     
-                        <ExternalLink to="http://www.github.com/sxflynn/covermyshift">
                             <Button 
+                            component="a"
+                            href="http://www.github.com/sxflynn/covermyshift"
                             variant="default" 
                             radius="xl" 
                             size="md" 
@@ -65,7 +64,6 @@ const CoverMyShiftProject = () => {
                             >
                                 GitHub repo
                             </Button>
-                        </ExternalLink>
                     </Group>
                 </div>
                 
