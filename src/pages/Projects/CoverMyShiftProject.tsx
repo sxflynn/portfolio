@@ -56,6 +56,7 @@ const CoverMyShiftProject = () => {
                             <Button 
                             component="a"
                             href="http://www.github.com/sxflynn/covermyshift"
+                            target="_blank"
                             variant="default" 
                             radius="xl" 
                             size="md" 
