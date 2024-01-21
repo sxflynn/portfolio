@@ -33,7 +33,6 @@ const jsxIcon = <IconFileTypeJsx />;
 const coffeeIcon = <IconCoffee />;
 
 const About = () => {
-
   const tocLinks = [
     { label: "Intro", link: "#intro", order: 1 },
     { label: "Michigan - 2010", link: "#michigan", order: 1 },
@@ -47,21 +46,17 @@ const About = () => {
   return (
     <>
       <Container>
-        <TableOfContentsFloating
-          links={tocLinks}
-        />
+        <TableOfContentsFloating links={tocLinks} />
       </Container>
       <Container size="sm" mt="xl" mb="xl">
         <Title id="intro" order={1}>
-          My Software Development Journey
+          Becoming a Software Developer
         </Title>
         <Text size="lg" mt="lg">
           Software development is the latest chapter in my professional goal to
-          help solve real-world problems with technology. My coding life started
-          with calculating pi in my introductory computer science course at
-          Lawrence University. 14 years, two careers and two masters degrees
-          later, I'm embarking on a journey to build tools, troubleshoot, and
-          create new efficiencies for the software community.
+          help solve real-world problems with technology. Over 14 years, through
+          two masters degrees and two careers, I have built tools and created
+          new efficiencies using code.
         </Text>
         <CodeHighlightTabs
           mt="lg"
@@ -75,7 +70,13 @@ const About = () => {
           ]}
         />
 
-        <Title id="michigan"  mt="lg" order={3}>
+        <Card withBorder mt="sm">
+          <Text>
+            My coding life started with calculating pi in my introductory
+            computer science course at Lawrence University.
+          </Text>
+        </Card>
+        <Title id="michigan" mt="lg" order={3}>
           University of Michigan: Plain Language Medical Dictionary — 2010
         </Title>
         <Text size="lg">
@@ -231,7 +232,7 @@ const About = () => {
             },
           ]}
         />
-        <Text size="lg" mt="lg" >
+        <Text size="lg" mt="lg">
           I revived <Code>election.py</Code> for the 2023 school board election,
           but wanted to create a tool that was web-based so others could make
           their own predictions. I set a deadline of the Friday before the
@@ -276,14 +277,14 @@ const About = () => {
             },
           ]}
         />
-        <Text size="lg" mt="lg" >
+        <Text size="lg" mt="lg">
           I publicized the app within the Upper Arlington community and received
           over 200 visitors over the weekend before the election. My prediction
           model ended up correctly predicting 2 out of 3 of the eventual
           winners.
         </Text>
         <Title id="techelevator" mt="lg" order={3}>
-          It's time to finally become a software developer — late 2023
+          Tech Elevator — late 2023
         </Title>
         <Text size="lg">
           The move to pursue a software developer career felt like the logical
@@ -350,7 +351,7 @@ const About = () => {
             their spending by pacing on a daily basis
           </ListItem>
         </List>
-        <Text size="lg" mt="lg" >
+        <Text size="lg" mt="lg">
           Stay tuned!
         </Text>
         <Space h="xl" />
