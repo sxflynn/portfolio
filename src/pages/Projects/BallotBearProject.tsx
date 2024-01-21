@@ -1,4 +1,4 @@
-import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code, Anchor } from '@mantine/core';
+import { Container, Title, Button, Group, Text, List, ThemeIcon, rem, Code } from '@mantine/core';
 import { IconCheck, IconBrandPython, IconApi, IconBrandReact, IconExternalLink } from '@tabler/icons-react';
 import classes from './Projects.module.css'
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
@@ -55,7 +55,7 @@ const BallotBearProject = () => {
 
                     <Group mt={30}>
                             <Button
-                                component={Anchor}
+                                component="a"
                                 href="http://www.ballotbear.app"
                                 target="_blank"
                                 radius="xl"
@@ -66,7 +66,7 @@ const BallotBearProject = () => {
                                 Visit BallotBear.app
                             </Button>
                             <Button
-                                component={Anchor}
+                                component="a"
                                 href="http://www.github.com/sxflynn/electionsim"
                                 target="_blank"
                                 variant="default"
