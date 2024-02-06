@@ -148,7 +148,7 @@ const Home = () => {
       >
         <ListItem>Tech Elevator full stack coding boot camp graduate</ListItem>
         <ListItem>
-          Seven years middle history school teacher, promoted to Technology
+          Seven years middle school history teacher, promoted to Technology
           Chair and Grade Level Chair
         </ListItem>
         <ListItem>Five years as Emerging Technologies Librarian</ListItem>
