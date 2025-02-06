@@ -21,14 +21,14 @@ const CoverMyShiftProject = () => {
                         spacing="sm"
                         size="sm"
                         icon={
-                            <ThemeIcon size={"lg"} radius="lg" variant="light">
+                            <ThemeIcon size="lg" radius="lg" variant="light">
                                 <IconCheck style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                             </ThemeIcon>
                         }
                     >
                         <List.Item
                             icon={
-                                <ThemeIcon size={"lg"} radius="xl" variant="light">
+                                <ThemeIcon size="lg" radius="xl" variant="light">
                                     <IconCoffee style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                                 </ThemeIcon>
                             }>
@@ -36,7 +36,7 @@ const CoverMyShiftProject = () => {
                         </List.Item>
                         <List.Item
                             icon={
-                                <ThemeIcon size={"lg"} radius="xl" variant="light">
+                                <ThemeIcon size="lg" radius="xl" variant="light">
                                     <IconSql style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                                 </ThemeIcon>
                             }>
@@ -44,7 +44,7 @@ const CoverMyShiftProject = () => {
                         </List.Item>
                         <List.Item
                             icon={
-                                <ThemeIcon size={"lg"} radius="xl" variant="light">
+                                <ThemeIcon size="lg" radius="xl" variant="light">
                                     <IconBrandVue style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                                 </ThemeIcon>
                             }>
@@ -71,7 +71,7 @@ const CoverMyShiftProject = () => {
                 <VideoPlayer 
                 src='https://assets.sxflynn.net/covermyshift-demo.mp4'
                 src2x='https://assets.sxflynn.net/covermyshift-demo@2x.mp4'
-                allowDimming={true}
+                allowDimming
                 />
 
             </div>

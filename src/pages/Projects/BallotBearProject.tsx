@@ -37,7 +37,7 @@ const BallotBearProject = () => {
             spacing="sm"
             size="sm"
             icon={
-              <ThemeIcon size={"lg"} radius="lg" variant="light">
+              <ThemeIcon size="lg" radius="lg" variant="light">
                 <IconCheck
                   style={{ width: rem(24), height: rem(24) }}
                   stroke={1.5}
@@ -47,7 +47,7 @@ const BallotBearProject = () => {
           >
             <List.Item
               icon={
-                <ThemeIcon size={"lg"} radius="xl" variant="light">
+                <ThemeIcon size="lg" radius="xl" variant="light">
                   <IconBrandPython
                     style={{ width: rem(24), height: rem(24) }}
                     stroke={1.5}
@@ -61,7 +61,7 @@ const BallotBearProject = () => {
             </List.Item>
             <List.Item
               icon={
-                <ThemeIcon size={"lg"} radius="xl" variant="light">
+                <ThemeIcon size="lg" radius="xl" variant="light">
                   <IconApi
                     style={{ width: rem(24), height: rem(24) }}
                     stroke={1.5}
@@ -74,7 +74,7 @@ const BallotBearProject = () => {
             </List.Item>
             <List.Item
               icon={
-                <ThemeIcon size={"lg"} radius="xl" variant="light">
+                <ThemeIcon size="lg" radius="xl" variant="light">
                   <IconBrandReact
                     style={{ width: rem(24), height: rem(24) }}
                     stroke={1.5}
@@ -116,7 +116,7 @@ const BallotBearProject = () => {
         <VideoPlayer
           src="https://assets.sxflynn.net/ballotbear-demo.mp4"
           src2x="https://assets.sxflynn.net/ballotbear-demo@2x.mp4"
-          allowDimming={true}
+          allowDimming
         />
       </div>
     </Container>

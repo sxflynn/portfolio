@@ -141,7 +141,7 @@ const Home = () => {
         spacing="sm"
         size="md"
         icon={
-          <ThemeIcon size={"md"} radius="lg" variant="light">
+          <ThemeIcon size="md" radius="lg" variant="light">
             <IconCheck style={{ width: rem(20), height: rem(20) }} stroke={2} />
           </ThemeIcon>
         }
