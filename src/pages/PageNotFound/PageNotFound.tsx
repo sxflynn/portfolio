@@ -14,7 +14,7 @@ const PageNotFound = () => {
               </Text>
               <Link to="/">
                 <Button variant="outline" size="md" mt="xl">
-                  <IconArrowLeftBar/><Space w="xs"></Space> Get back to home page
+                  <IconArrowLeftBar/><Space w="xs" /> Get back to home page
                 </Button>
               </Link>
             </div>
