@@ -2880,7 +2880,7 @@ stylelint-scss@^6.4.0:
     postcss-selector-parser "^7.0.0"
     postcss-value-parser "^4.2.0"
 
-stylelint@^16.0.2, stylelint@^16.1.0, stylelint@^16.11.0, stylelint@^16.13.2, stylelint@^16.6.1:
+stylelint@^16.0.2, stylelint@^16.1.0, stylelint@^16.11.0, stylelint@^16.14.1, stylelint@^16.6.1:
   version "16.14.1"
   resolved "https://registry.npmjs.org/stylelint/-/stylelint-16.14.1.tgz"
   integrity sha512-oqCL7AC3786oTax35T/nuLL8p2C3k/8rHKAooezrPGRvUX0wX+qqs5kMWh5YYT4PHQgVDobHT4tw55WgpYG6Sw==

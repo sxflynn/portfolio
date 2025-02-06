@@ -8,8 +8,11 @@
     "build": "tsc && vite build",
     "typecheck": "tsc --noEmit",
     "lint": "npm run eslint && npm run stylelint",
+    "lint:fix": "npm run eslint:fix && stylelint:fix",
     "eslint": "eslint . --cache",
+    "eslint:fix": "eslint . --fix --cache",
     "stylelint": "stylelint '**/*.css' --cache",
+    "stylelint:fix": "stylelint --fix '**/*.css' --cache",
     "prettier": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "preview": "vite preview"
@@ -38,7 +41,7 @@
     "postcss": "^8.5.1",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
-    "stylelint": "^16.13.2",
+    "stylelint": "^16.14.1",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.7.3",
     "vite": "^6.1.0"
