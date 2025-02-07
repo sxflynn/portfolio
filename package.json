@@ -15,7 +15,9 @@
     "stylelint:fix": "stylelint --fix '**/*.css' --cache",
     "prettier": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "wrangler:listDeployments": "wrangler pages deployment list --project-name sxflynnportfolio",
+    "wrangler:deployMain": "npm run build && wrangler pages deploy --branch main"
   },
   "dependencies": {
     "@mantine/code-highlight": "^7.16.2",
