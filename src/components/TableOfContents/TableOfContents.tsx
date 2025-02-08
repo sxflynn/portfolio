@@ -1,8 +1,8 @@
-import cx from "clsx";
-import { useState } from "react";
-import { Box, Text, Group, rem } from "@mantine/core";
-import { IconListSearch } from "@tabler/icons-react";
-import classes from "./TableOfContents.module.css";
+import { useState } from 'react';
+import { IconListSearch } from '@tabler/icons-react';
+import cx from 'clsx';
+import { Box, Group, rem, Text } from '@mantine/core';
+import classes from './TableOfContents.module.css';
 
 type Link = {
   label: string;
@@ -18,7 +18,7 @@ export function TableOfContentsFloating({ links }: TableOfContentsProps) {
   const [active, setActive] = useState(0);
 
   const items = links.map((heading, index) => (
-    <Box<"a">
+    <Box<'a'>
       key={heading.label}
       component="a"
       className={cx(classes.link, {
@@ -39,10 +39,7 @@ export function TableOfContentsFloating({ links }: TableOfContentsProps) {
   return (
     <div className={classes.toc}>
       <Group mb="md">
-        <IconListSearch
-          style={{ width: rem(18), height: rem(18) }}
-          stroke={1.5}
-        />
+        <IconListSearch style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
         <Text>Table of contents</Text>
       </Group>
       <div className={classes.links}>

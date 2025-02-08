@@ -1,23 +1,24 @@
-import { Container, Title, Text, Button, Space } from "@mantine/core";
-import { IconArrowLeftBar, IconError404 } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
+import { IconArrowLeftBar, IconError404 } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
+import { Button, Container, Space, Text, Title } from '@mantine/core';
 
 const PageNotFound = () => {
   return (
     <Container size="30rem" mt="lg">
-            <div>
-                <IconError404 size={300} />
-              <Title>Page not found</Title>
-              <Text mt="md" c="dimmed" size="lg">
-                Page you are trying to open does not exist. You may have mistyped
-                the address, or the page has been moved to another URL.
-              </Text>
-              <Link to="/">
-                <Button variant="outline" size="md" mt="xl">
-                  <IconArrowLeftBar/><Space w="xs" /> Get back to home page
-                </Button>
-              </Link>
-            </div>
+      <div>
+        <IconError404 size={300} />
+        <Title>Page not found</Title>
+        <Text mt="md" c="dimmed" size="lg">
+          Page you are trying to open does not exist. You may have mistyped the address, or the page
+          has been moved to another URL.
+        </Text>
+        <Link to="/">
+          <Button variant="outline" size="md" mt="xl">
+            <IconArrowLeftBar />
+            <Space w="xs" /> Get back to home page
+          </Button>
+        </Link>
+      </div>
     </Container>
   );
 };

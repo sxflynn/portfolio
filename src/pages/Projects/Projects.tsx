@@ -2,14 +2,12 @@ import BallotBearProject from './BallotBearProject';
 import CoverMyShiftProject from './CoverMyShiftProject';
 
 const Projects = () => {
-
-    return (
-        <>
-            <BallotBearProject />
-            <CoverMyShiftProject />
-        </>
-
-    );
-}
+  return (
+    <>
+      <BallotBearProject />
+      <CoverMyShiftProject />
+    </>
+  );
+};
 
 export default Projects;

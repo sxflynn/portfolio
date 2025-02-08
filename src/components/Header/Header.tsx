@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Container, Menu, Group, Burger } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { Link, NavLink, useLocation } from 'react-router-dom';
 import { IconExternalLink } from '@tabler/icons-react';
-import classes from './Header.module.css';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Burger, Container, Group, Menu } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 import { ColorSchemeButton } from '../ColorSchemeButton/ColorSchemeButton';
 import { FullNameHeader } from '../FullNameHeader/FullNameHeader';
+import classes from './Header.module.css';
 
 const links = [
   { link: '/projects', label: 'Projects' },
@@ -26,13 +26,23 @@ export function Header() {
   const dropdownMenuItems = links.map((link) => {
     const isExternalLink = link.link.startsWith('http');
     return isExternalLink ? (
-      <Menu.Item component="a"
-       rightSection={<IconExternalLink/>}
-       href={link.link} key={link.label} target="_blank" rel="noopener noreferrer">
+      <Menu.Item
+        component="a"
+        rightSection={<IconExternalLink />}
+        href={link.link}
+        key={link.label}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {link.label}
       </Menu.Item>
     ) : (
-      <Menu.Item component={Link} to={link.link} key={link.label} onClick={() => setActive(link.link)}>
+      <Menu.Item
+        component={Link}
+        to={link.link}
+        key={link.label}
+        onClick={() => setActive(link.link)}
+      >
         {link.label}
       </Menu.Item>
     );
@@ -63,30 +73,26 @@ export function Header() {
     );
   });
 
-
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-       <FullNameHeader setActive={setActive} />
+        <FullNameHeader setActive={setActive} />
 
         {/* Top Items */}
         <Group gap={5} visibleFrom="xs">
           {topItems}
-          <ColorSchemeButton/>
+          <ColorSchemeButton />
         </Group>
         {/* Menu Items */}
         <Group hiddenFrom="xs">
-        <ColorSchemeButton/>
+          <ColorSchemeButton />
           <Menu opened={opened} onOpen={toggle} onClose={toggle}>
             <Menu.Target>
               <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="md" />
             </Menu.Target>
-            <Menu.Dropdown>
-              {dropdownMenuItems}
-            </Menu.Dropdown>
+            <Menu.Dropdown>{dropdownMenuItems}</Menu.Dropdown>
           </Menu>
         </Group>
-        
       </Container>
     </header>
   );
