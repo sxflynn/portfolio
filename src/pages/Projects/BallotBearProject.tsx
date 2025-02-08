@@ -1,35 +1,23 @@
 import {
-  Container,
-  Title,
-  Button,
-  Group,
-  Text,
-  List,
-  ThemeIcon,
-  rem,
-  Code,
-} from "@mantine/core";
-import {
-  IconCheck,
-  IconBrandPython,
   IconApi,
+  IconBrandPython,
   IconBrandReact,
+  IconCheck,
   IconExternalLink,
-} from "@tabler/icons-react";
-import classes from "./Projects.module.css";
-import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+} from '@tabler/icons-react';
+import { Button, Code, Container, Group, List, rem, Text, ThemeIcon, Title } from '@mantine/core';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
+import classes from './Projects.module.css';
 
 const BallotBearProject = () => {
   return (
     <Container size="lg">
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>
-            Upper Arlington School Board Election Simulator
-          </Title>
+          <Title className={classes.title}>Upper Arlington School Board Election Simulator</Title>
           <Text mt="md">
-            React/Python web application to help an Upper Arlington voter
-            predict who will win the November 2023 School Board election.
+            React/Python web application to help an Upper Arlington voter predict who will win the
+            November 2023 School Board election.
           </Text>
 
           <List
@@ -38,52 +26,39 @@ const BallotBearProject = () => {
             size="sm"
             icon={
               <ThemeIcon size="lg" radius="lg" variant="light">
-                <IconCheck
-                  style={{ width: rem(24), height: rem(24) }}
-                  stroke={1.5}
-                />
+                <IconCheck style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
               </ThemeIcon>
             }
           >
             <List.Item
               icon={
                 <ThemeIcon size="lg" radius="xl" variant="light">
-                  <IconBrandPython
-                    style={{ width: rem(24), height: rem(24) }}
-                    stroke={1.5}
-                  />
+                  <IconBrandPython style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                 </ThemeIcon>
               }
             >
-              <b>Prediction engine written in Python</b> – Business logic
-              abstracted from implementation, allowing election engine to run
-              both as a CLI or a web app
+              <b>Prediction engine written in Python</b> – Business logic abstracted from
+              implementation, allowing election engine to run both as a CLI or a web app
             </List.Item>
             <List.Item
               icon={
                 <ThemeIcon size="lg" radius="xl" variant="light">
-                  <IconApi
-                    style={{ width: rem(24), height: rem(24) }}
-                    stroke={1.5}
-                  />
+                  <IconApi style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                 </ThemeIcon>
               }
             >
-              <b>Served with FastAPI</b> – Election configuration and candidate
-              information is validated with Pydantic models
+              <b>Served with FastAPI</b> – Election configuration and candidate information is
+              validated with Pydantic models
             </List.Item>
             <List.Item
               icon={
                 <ThemeIcon size="lg" radius="xl" variant="light">
-                  <IconBrandReact
-                    style={{ width: rem(24), height: rem(24) }}
-                    stroke={1.5}
-                  />
+                  <IconBrandReact style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
                 </ThemeIcon>
               }
             >
-              <b>React frontend</b> – User preferences stored in{" "}
-              <Code>LocalStorage</Code>. Built with Vite.
+              <b>React frontend</b> – User preferences stored in <Code>LocalStorage</Code>. Built
+              with Vite.
             </List.Item>
           </List>
 
