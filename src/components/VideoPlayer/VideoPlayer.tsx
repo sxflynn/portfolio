@@ -62,7 +62,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   const isDark = colorScheme === 'dark';
 
   return (
-    <div className={classes.videoContainer} onClick={togglePlayPause}>
+    <div className={classes.videoContainer}>
       <LoadingOverlay visible={isLoading} loaderProps={{ type: 'dots' }} />
       <video
         tabIndex={0}
@@ -75,6 +75,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         onLoadStart={onVideoLoadStart}
         onCanPlay={onVideoCanPlay}
         onKeyDown={getHotkeyHandler([['Enter', togglePlayPause]])}
+        onClick={togglePlayPause}
       >
         <source src={selectedSrc} type={type} />
         {freeSrc && <source src={freeSrc} type={freeSrcType} />}
