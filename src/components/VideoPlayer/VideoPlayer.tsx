@@ -14,7 +14,7 @@ type VideoPlayerProps = {
   allowDimming?: boolean;
 };
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({
+const VideoPlayer = ({
   src,
   src2x,
   freeSrc,
@@ -23,7 +23,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   type = 'video/mp4',
   loop = true,
   playsInline = true,
-}) => {
+}:VideoPlayerProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isLoading, setIsLoading] = useState(true);
 
