@@ -48,7 +48,7 @@
     "stylelint": "^16.14.1",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5.7.3",
-    "vite": "^6.2.3",
+    "vite": "^6.2.4",
     "wrangler": "^3.107.3"
   }
 }
