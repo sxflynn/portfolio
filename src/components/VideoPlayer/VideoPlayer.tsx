@@ -23,7 +23,7 @@ const VideoPlayer = ({
   type = 'video/mp4',
   loop = true,
   playsInline = true,
-}:VideoPlayerProps) => {
+}: VideoPlayerProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isLoading, setIsLoading] = useState(true);
 

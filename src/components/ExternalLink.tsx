@@ -8,7 +8,8 @@ const isUrlValid = (url: string): boolean => {
   try {
     new URL(url);
     return true;
-  } catch (e) {
+  } catch (e: unknown) {
+    console.error(e);
     return false;
   }
 };
